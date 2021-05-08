@@ -1,0 +1,309 @@
+﻿<Window x:Class="FoodRecipes.DetailScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodRecipes"
+        mc:Ignorable="d"
+        x:Name="detailScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Icon="Assets/Icons/FoodRecipesLogo.ico"
+        ShowActivated="True"
+        ShowInTaskbar="False"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Width="566"
+        Height="650"
+        Loaded="detailScreen_Loaded">
+    <Grid>
+        <!--Khung màn hình detail screen-->
+        <Border x:Name="detailScreenBorder"
+                CornerRadius="5"
+                BorderThickness="1"
+                Background="#FFFFFF"
+                BorderBrush="#FF4500">
+            <Grid>
+                <!--Nội dung của bước-->
+                <ListView x:Name="stepContentListView"
+                          Background="Transparent"
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                          VerticalAlignment="Top"
+                          Focusable="False"
+                          BorderThickness="0">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="IsTabStop"
+                                    Value="False" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <ContentPresenter/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <Grid/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!--Vùng nội dung bước-->
+                            <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Top"
+                                          Margin="5 420 5 5">
+                                <Grid x:Name="stepContentGrid"
+                                      Width="500">
+                                    <!--Khung nội dung bước-->
+                                    <Border x:Name="stepContentBorder"
+                                            CornerRadius="5"
+                                            Background="#CCCCCC"
+                                            Effect="{StaticResource addAndDetailScreenLightGrayShadowEffect}"/>
+                                    <!--Nội dung bước-->
+                                    <TextBlock x:Name="stepContentText"
+                                               Text="{Binding content}"
+                                               TextWrapping="Wrap"
+                                               LineStackingStrategy="BlockLineHeight"
+                                               LineHeight="19"
+                                               VerticalAlignment="Top"
+                                               TextAlignment="Justify"
+                                               MaxHeight="281"
+                                               Padding="10"
+                                               Foreground="#696969"
+                                               FontSize="15"
+                                               FontWeight="Medium"/>
+                                </Grid>
+                            </ScrollViewer>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--Danh sách hình thu nhỏ-->
+                <ListView x:Name="thumbnailListView"
+                          Background="Transparent"
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                          VerticalAlignment="Top"
+                          Focusable="False"
+                          BorderThickness="0">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="IsTabStop"
+                                    Value="False" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <ContentPresenter/>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected"
+                                                     Value="True">
+                                                <Setter Property="Focusable"
+                                                        Value="False"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Vertical"
+                                       HorizontalAlignment="Center"
+                                       Margin="0"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!--Khung ảnh minh họa bước-->
+                            <Border x:Name="guideImage"
+                                    CornerRadius="5"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Width="380"
+                                    Height="320"
+                                    Margin="5 80 5 5">
+                                <Border.Background>
+                                    <!--Ảnh minh họa bước-->
+                                    <ImageBrush ImageSource="{Binding Converter={StaticResource relativeToAbsolutePathConverter}}"
+                                                RenderOptions.BitmapScalingMode="HighQuality"
+                                                Stretch="UniformToFill"/>
+                                </Border.Background>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--Khung phủ ảnh minh họa-->
+                <Border x:Name="carouselCoverBorder"
+                        VerticalAlignment="Top"
+                        Height="320"
+                        Margin="0 81 0 0">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,1"
+                                             EndPoint="1,1">
+                            <GradientStop Color="#D3D3D3"
+                                          Offset="0"/>
+                            <GradientStop Color="Transparent"
+                                          Offset="0.1"/>
+                            <GradientStop Color="Transparent"
+                                          Offset="0.9"/>
+                            <GradientStop Color="#D3D3D3"
+                                          Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Grid>
+                        <!--Nút bước trước-->
+                        <Button x:Name="previousStepButton"
+                                Style="{StaticResource previousStepButtonStyle}"
+                                Click="previousStepButton_Click"/>
+                        <!--Nút bước sau-->
+                        <Button x:Name="nextStepButton"
+                                Style="{StaticResource nextStepButtonStyle}"
+                                Click="nextStepButton_Click"/>
+                    </Grid>
+                </Border>
+                <!--Tên món ăn-->
+                <TextBlock x:Name="foodName"
+                           FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                           FontSize="30"
+                           FontWeight="Medium"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Top"
+                           Margin="0 15 10 0"
+                           Effect="{StaticResource addAnddetailScreenOrangeShadowEffect}">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush StartPoint="0,1"
+                                             EndPoint="1,1">
+                            <GradientStop Color="#FF4500"
+                                          Offset="0"/>
+                            <GradientStop Color="#FFA500"
+                                          Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                <!--Khung tên bước-->
+                </TextBlock>
+                <Border x:Name="stepNameBorder"
+                        CornerRadius="5"
+                        Background="Green"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Padding="10 2 10 2"
+                        Margin="10 42 0 0"
+                        Effect="{StaticResource addAndDetailScreenGrayShadowEffect}">
+                    <!--Tên bước--> 
+                    <TextBlock x:Name="stepName"
+                               FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                               Foreground="#FFFFFF"
+                               FontSize="18"
+                               FontWeight="Medium"
+                               Text="{Binding ElementName=stepsListView, Path=SelectedItem}"/>
+                </Border>
+            </Grid>
+        </Border>
+        <!--Khung danh sách các bước-->
+        <Grid x:Name="stepsGrid"
+              VerticalAlignment="Bottom"
+              Height="80">
+            <!--Khung nền-->
+            <Border x:Name="stepsBorder"
+                    CornerRadius="5"
+                    Background="#000000"
+                    Opacity="0.7"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <!--Đường kẻ-->
+                <Line Grid.Column="1"
+                      VerticalAlignment="Center"
+                      StrokeThickness="2"
+                      Stroke="#FFFFFF"
+                      Y1="70"/>
+                <!--Nút mở video-->
+                <Button x:Name="playVideoButton"
+                        Style="{StaticResource playVideoButtonStyle}"
+                        Click="playVideoButton_Click"/>
+                <!--Danh sách các bước-->
+                <ListView x:Name="stepsListView"
+                          ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                          Background="Transparent"
+                          BorderThickness="0"
+                          SelectedIndex="0"
+                          SelectionChanged="stepsListView_SelectionChanged">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!--Khung item-->
+                            <Border x:Name="itemBorder"
+                                    Width="45"
+                                    Margin="5">
+                                <!--Tên bước-->
+                                <TextBlock x:Name="stepName"
+                                           Text="{Binding}"
+                                           TextWrapping="WrapWithOverflow"
+                                           VerticalAlignment="Center"
+                                           TextAlignment="Center"
+                                           Foreground="#FFFFFF"
+                                           FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                                           FontSize="16"
+                                           FontWeight="Medium"/>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <!--Nút cuộn-->
+            <ToggleButton x:Name="growButton"
+                          Style="{StaticResource growButtonStyle}">
+                <ToggleButton.Triggers>
+                    <EventTrigger RoutedEvent="ToggleButton.Checked">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="stepsGrid"
+                                                 Storyboard.TargetProperty="Height"
+                                                 BeginTime="0:0:0"
+                                                 Duration="0:0:0.2"
+                                                 To="80"/>
+                                <ThicknessAnimation Storyboard.TargetName="growButton"
+                                                    Storyboard.TargetProperty="Margin"
+                                                    BeginTime="0:0:0"
+                                                    Duration="0:0:0"
+                                                    To="0 -8 0 0"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="stepsGrid"
+                                                 Storyboard.TargetProperty="Height"
+                                                 BeginTime="0:0:0"
+                                                 Duration="0:0:0.2"
+                                                 To="0"/>
+                                <ThicknessAnimation Storyboard.TargetName="growButton"
+                                                    Storyboard.TargetProperty="Margin"
+                                                    BeginTime="0:0:0"
+                                                    Duration="0:0:0"
+                                                    To="0 -16 0 0"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </ToggleButton.Triggers>
+            </ToggleButton>
+        </Grid>
+        <!--Nút thoát-->
+        <Button x:Name="backButton"
+                Style="{StaticResource backButtonStyle}"
+                Click="backButton_Click"/>
+    </Grid>
+</Window>

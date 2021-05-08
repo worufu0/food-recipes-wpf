@@ -1,0 +1,408 @@
+﻿<Window x:Class="FoodRecipes.AddScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodRecipes"
+        mc:Ignorable="d"
+        x:Name="addScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Icon="Assets/Icons/FoodRecipesLogo.ico"
+        ShowInTaskbar="False"
+        ShowActivated="True"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Width="566"
+        Height="650">
+    <Grid>
+        <!--Khung màn hình add screen-->
+        <Border x:Name="addScreenBorder"
+                CornerRadius="5"
+                BorderThickness="2"
+                Background="#FFFFFF"
+                BorderBrush="#FF4500">
+            <!--Thanh cuộn màn hình add screen-->
+            <ScrollViewer x:Name="addScreenScrollBar"
+                          Margin="0 60 0 60"
+                          HorizontalScrollBarVisibility="Disabled">
+                <!--Bảng nhập thông tin-->
+                <StackPanel x:Name="informationStackPanel">
+                    <Line x:Name="line1"
+                          Stroke="#D3D3D3"
+                          VerticalAlignment="Center"
+                          StrokeThickness="3"
+                          X1="800"
+                          Margin="5"/>
+                    <!--Nhãn thông tin cơ bản-->
+                    <TextBlock x:Name="basicInformation"
+                               Text="Thông tin cơ bản"
+                               FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Foreground="#696969"
+                               FontSize="20"
+                               FontWeight="Medium"
+                               Margin="10"/>
+                    <!--Bảng tên món ăn-->
+                    <StackPanel x:Name="foodNameStackPanel"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10">
+                        <!--Nhãn tên món ăn-->
+                        <TextBlock x:Name="foodNameLabel"
+                                   Text="Tên món ăn:"
+                                   Foreground="#696969"
+                                   Width="110"
+                                   FontSize="16"
+                                   Margin="10"/>
+                        <!--Hộp tên món ăn-->
+                        <TextBox x:Name="foodNameBox"
+                                 FontSize="16"
+                                 Width="380"
+                                 Height="40"
+                                 MaxLength="32"
+                                 Padding="8"
+                                 Style="{StaticResource fillTextBoxStyle}"
+                                 TextChanged="fillBox_TextChanged"/>
+                    </StackPanel>
+                    <!--Bảng mô tả-->
+                    <StackPanel x:Name="descriptionStackPanel"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10">
+                        <!--Nhãn mô tả-->
+                        <TextBlock x:Name="descriptionLabel"
+                                   Text="Mô tả:"
+                                   Foreground="#696969"
+                                   Width="110"
+                                   FontSize="16"
+                                   Margin="10"/>
+                        <!--Hộp mô tả-->
+                        <TextBox x:Name="descriptionBox"
+                                 TextWrapping="Wrap"
+                                 FontSize="16"
+                                 Width="380"
+                                 Height="120"
+                                 MaxLength="310"
+                                 Padding="8"
+                                 Style="{StaticResource fillTextBoxStyle}"
+                                 TextChanged="fillBox_TextChanged"/>
+                    </StackPanel>
+                    <!--Bảng loại món ăn và thời gian-->
+                    <StackPanel x:Name="typeAndTimeStackPanel"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10">
+                        <!--Nhãn loại món ăn-->
+                        <TextBlock x:Name="foodTypeLabel"
+                                   Text="Loại món ăn:"
+                                   Foreground="#696969"
+                                   Width="110"
+                                   FontSize="16"
+                                   Margin="10"/>
+                        <!--Hộp loại món ăn-->
+                        <TextBox x:Name="foodTypeBox"
+                                 FontSize="16"
+                                 Width="130"
+                                 Height="40"
+                                 MaxLength="16"
+                                 Padding="8"
+                                 Style="{StaticResource fillTextBoxStyle}"
+                                 TextChanged="fillBox_TextChanged"/>
+                        <!--Nhãn thởi gian-->
+                        <TextBlock x:Name="timeLabel"
+                                   Text="Thời gian (phút):"
+                                   Foreground="#696969"
+                                   Width="130"
+                                   FontSize="16"
+                                   Margin="10"/>
+                        <!--Hộp thời gian-->
+                        <TextBox x:Name="timeBox"
+                                 FontSize="16"
+                                 Width="100"
+                                 Height="40"
+                                 MaxLength="3"
+                                 Padding="8"
+                                 Style="{StaticResource fillTextBoxStyle}"
+                                 PreviewTextInput="timeBox_PreviewTextInput"
+                                 TextChanged="fillBox_TextChanged"/>
+                    </StackPanel>
+                    <!--Bảng hình ảnh mô tả-->
+                    <StackPanel x:Name="imageStackPanel"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10">
+                        <!--Nhãn hình ảnh mô tả-->
+                        <TextBlock x:Name="imageLabel"
+                                   Text="Hình ảnh:"
+                                   Foreground="#696969"
+                                   Width="110"
+                                   FontSize="16"
+                                   Margin="10"/>
+                        <!--Hộp hình ảnh mô tả-->
+                        <TextBox x:Name="imageBox"
+                                 VerticalAlignment="Top"
+                                 FontSize="16"
+                                 Width="200"
+                                 Height="40"
+                                 MaxLength="128"
+                                 Padding="8"
+                                 IsReadOnly="True"
+                                 Style="{StaticResource fillTextBoxStyle}"
+                                 TextChanged="fillBox_TextChanged"/>
+                        <!--Nút chọn hình ảnh mô tả-->
+                        <Button x:Name="browseButton"
+                                Style="{StaticResource browseButtonStyle}"
+                                Click="browseButton_Click"/>
+                        <!--Khung xem trước hình ảnh mô tả-->
+                        <Border x:Name="imageBorder"
+                                Width="120"
+                                Height="100"
+                                BorderThickness="1"
+                                BorderBrush="#D3D3D3"
+                                Margin="0 0 10 0">
+                            <!--Thông bao hình ảnh mô tả-->
+                            <TextBlock x:Name="imageNotification"
+                                       Text="Hình ảnh"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       Foreground="#D3D3D3"/>
+                        </Border>
+                    </StackPanel>
+                    <!--Bảng video youtube-->
+                    <StackPanel x:Name="videoStackPanel"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10 -60 0 0">
+                        <!--Nhãn video youtube-->
+                        <TextBlock x:Name="videoLabel"
+                                   Text="Youtube Video:"
+                                   Foreground="#696969"
+                                   Width="110"
+                                   FontSize="16"
+                                   Margin="10"/>
+                        <!--Hộp video youtube-->
+                        <TextBox x:Name="videoBox"
+                                 FontSize="16"
+                                 Width="250"
+                                 Height="40"
+                                 MaxLength="128"
+                                 Padding="8"
+                                 Style="{StaticResource fillTextBoxStyle}"
+                                 TextChanged="fillBox_TextChanged"/>
+                    </StackPanel>
+                    <Line x:Name="line2"
+                          Stroke="#D3D3D3"
+                          VerticalAlignment="Center"
+                          StrokeThickness="3"
+                          X1="800"
+                          Margin="5 15 5 5"/>
+                    <!--Khung thông tin các bước-->
+                    <TextBlock x:Name="stageInformation"
+                               Text="Các công đoạn chế biến"
+                               FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Foreground="#696969"
+                               FontSize="20"
+                               FontWeight="Medium"
+                               Margin="10"/>
+                    <!--Nhãn bước chuẩn bị-->
+                    <TextBlock x:Name="firstStepLabel"
+                               Text="Chuẩn bị nguyên liệu"
+                               FontStyle="Italic"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Right"
+                               Foreground="Green"
+                               FontSize="18"
+                               FontWeight="Heavy"
+                               Margin="10 10 20 10"/>
+                    <!--Bảng nội dung bước chuẩn bị-->
+                    <StackPanel x:Name="firstStepContentStackPanel"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10">
+                        <!--Nhãn nội dung bước chuẩn bị-->
+                        <TextBlock x:Name="firstStepContentLabel"
+                                   Text="Nội dung:"
+                                   Foreground="#696969"
+                                   Width="110"
+                                   FontSize="16"
+                                   Margin="10"/>
+                        <!--Hộp nội dung bước chuẩn bị-->
+                        <TextBox x:Name="firstStepContentBox"
+                                 TextWrapping="Wrap"
+                                 FontSize="16"
+                                 Width="380"
+                                 Height="120"
+                                 MaxLength="820"
+                                 Padding="8"
+                                 Style="{StaticResource fillTextBoxStyle}"
+                                 TextChanged="fillBox_TextChanged"/>
+                    </StackPanel>
+                    <!--Bảng hình ảnh bước chuẩn bị-->
+                    <StackPanel x:Name="firstStepImageStackPanel"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10">
+                        <!--Nhãn hình ảnh bước chuẩn bị-->
+                        <TextBlock x:Name="firstStepImageLabel"
+                                   Text="Ảnh minh họa:"
+                                   Foreground="#696969"
+                                   Width="110"
+                                   FontSize="16"
+                                   Margin="10"/>
+                        <!--Hộp hình ảnh bước chuẩn bị-->
+                        <TextBox x:Name="firstStepImageBox"
+                                 VerticalAlignment="Top"
+                                 IsReadOnly="True"
+                                 FontSize="16"
+                                 Width="200"
+                                 Height="40"
+                                 MaxLength="128"
+                                 Padding="8"
+                                 Style="{StaticResource fillTextBoxStyle}"
+                                 TextChanged="fillBox_TextChanged"/>
+                        <!--Nút chọn hình ảnh bước chuẩn bị-->
+                        <Button x:Name="firstStepBrowseButton"
+                                Style="{StaticResource browseButtonStyle}"
+                                Click="firstStepBrowseButton_Click"/>
+                        <!--Khung xem trước hình ảnh bước chuẩn bị-->
+                        <Border x:Name="firstStepImageBorder"
+                                Width="120"
+                                Height="100"
+                                BorderThickness="1"
+                                BorderBrush="#D3D3D3"
+                                Margin="0 0 10 0">
+                            <!--Thông báo hình ảnh bước chuẩn bị-->
+                            <TextBlock x:Name="firstStepImageNotification"
+                                       Text="Hình ảnh"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       Foreground="#D3D3D3"/>
+                        </Border>
+                    </StackPanel>
+                    <!--Bảng các bước thêm-->
+                    <StackPanel x:Name="stepsStackPanel"/>
+                    <!--Nút thêm bước-->
+                    <Button x:Name="addStepButton"
+                            Style="{StaticResource addStepButtonStyle}"
+                            Click="addStepButton_Click"/>
+                    <!--Nhãn bước thành phẩm-->
+                    <TextBlock x:Name="lastStepLabel"
+                               Text="Thành phẩm"
+                               FontStyle="Italic"
+                               HorizontalAlignment="Right"
+                               Foreground="Green"
+                               FontSize="18"
+                               FontWeight="Heavy"
+                               Margin="10 10 20 10"/>
+                    <!--Bảng nội dung bước thành phẩm-->
+                    <StackPanel x:Name="lastStepContentStackPanel"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10">
+                        <!--Nhãn nội dung bước thành phẩm-->
+                        <TextBlock x:Name="lastStepContentLabel"
+                                   Text="Nội dung:"
+                                   Foreground="#696969"
+                                   Width="110"
+                                   FontSize="16"
+                                   Margin="10"/>
+                        <!--Hộp nội dung bước thành phẩm-->
+                        <TextBox x:Name="lastStepContentBox"
+                                 TextWrapping="Wrap"
+                                 FontSize="16"
+                                 Width="380"
+                                 Height="120"
+                                 MaxLength="820"
+                                 Padding="8"
+                                 Style="{StaticResource fillTextBoxStyle}"
+                                 TextChanged="fillBox_TextChanged"/>
+                    </StackPanel>
+                    <!--Bảng hình ảnh bước thành phẩm-->
+                    <StackPanel x:Name="lastStepImageStackPanel"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10">
+                        <!--Nhãn hình ảnh bước thành phẩm-->
+                        <TextBlock x:Name="lastStepImageLabel"
+                                   Text="Ảnh minh họa:"
+                                   Foreground="#696969"
+                                   Width="110"
+                                   FontSize="16"
+                                   Margin="10"/>
+                        <!--Hộp hình ảnh bước thành phẩm-->
+                        <TextBox x:Name="lastStepImageBox"
+                                 VerticalAlignment="Top"
+                                 IsReadOnly="True"
+                                 FontSize="16"
+                                 Width="200"
+                                 Height="40"
+                                 MaxLength="128"
+                                 Padding="8"
+                                 Style="{StaticResource fillTextBoxStyle}"
+                                 TextChanged="fillBox_TextChanged"/>
+                        <!--Nút chọn hình ảnh bước thành phẩm-->
+                        <Button x:Name="lastStepBrowseButton"
+                                Style="{StaticResource browseButtonStyle}"
+                                Click="lastStepBrowseButton_Click"/>
+                        <!--Khung xem trước hình ảnh bước thành phẩm-->
+                        <Border x:Name="lastStepImageBorder"
+                                Width="120"
+                                Height="100"
+                                BorderThickness="1"
+                                BorderBrush="#D3D3D3"
+                                Margin="0 0 10 0">
+                            <!--Thông báo hình ảnh bước thành phẩm-->
+                            <TextBlock x:Name="lastStepImageNotification"
+                                       Text="Hình ảnh"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       Foreground="#D3D3D3"/>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <!--Tiêu đề màn hình add screen-->
+        <TextBlock x:Name="addScreenTitle"
+                   Text="THÊM MỚI CÔNG THỨC"
+                   FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Right"
+                   FontSize="30"
+                   FontWeight="Medium"
+                   Margin="15"
+                   Effect="{StaticResource addAnddetailScreenOrangeShadowEffect}">
+            <TextBlock.Foreground>
+                <LinearGradientBrush StartPoint="0,1"
+                                     EndPoint="1,1">
+                    <GradientStop Color="#FF4500"
+                                  Offset="0"/>
+                    <GradientStop Color="#FFA500"
+                                   Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <!--Nút thêm-->
+        <Button x:Name="addButton"
+                Style="{StaticResource addConfirmButtonStyle}"
+                Click="addButton_Click"/>
+        <!--Nút trở về-->
+        <Button x:Name="backButton"
+                Style="{StaticResource backButtonStyle}"
+                Click="backButton_Click"/>
+    </Grid>
+</Window>

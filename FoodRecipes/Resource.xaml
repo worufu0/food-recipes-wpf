@@ -1,0 +1,1189 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:FoodRecipes">
+<!--Bộ chuyển đổi-->
+    <local:RelativeToAbsolutePathConverter x:Key="relativeToAbsolutePathConverter"/>
+    <local:BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter"/>
+<!--Splash Screen-->
+    <!--Hiệu ứng đổ bóng đen-->
+    <DropShadowEffect x:Key="splashScreenBlackShadowEffect"
+                      BlurRadius="40"
+                      ShadowDepth="30"
+                      Direction="0"
+                      Color="#000000"/>
+    <!--Hiệu ứng đổ bóng trắng-->
+    <DropShadowEffect x:Key="splashScreenWhiteShadowEffect"
+                      BlurRadius="10"
+                      ShadowDepth="2"
+                      Direction="90"
+                      Color="#FFFFFF"/>
+    <!--Kiểu chữ-->
+    <Style x:Key="splashScreenTextStyle"
+           TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground"
+                Value="#FFFFFF"/>
+        <Setter Property="FontFamily"
+                Value="/FoodRecipes;component/Fonts/#Tahoma"/>
+        <Setter Property="TextAlignment"
+                Value="Justify"/>
+        <Setter Property="TextWrapping"
+                Value="WrapWithOverflow"/>
+        <Setter Property="FontWeight"
+                Value="Medium"/>
+        <Setter Property="FontSize"
+                Value="15"/>
+        <Setter Property="VerticalAlignment"
+                Value="Center"/>
+    </Style>
+    <!--Kiểu tick checkbox -->
+    <Style x:Key="tickCheckboxStyle"
+           TargetType="{x:Type CheckBox}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="Margin"
+                Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Image x:Name="tickCheckBoxIcon"
+                           Source="Assets/Icons/UncheckedTickCheckboxIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="28"
+                           Height="28"/>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver"
+                                           Value="True"/>
+                                <Condition Property="IsChecked"
+                                           Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="tickCheckBoxIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/HoverTickCheckboxIcon.png"/>
+                            <Setter Property="Effect"
+                                    Value="{StaticResource splashScreenWhiteShadowEffect}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver"
+                                           Value="True"/>
+                                <Condition Property="IsChecked"
+                                           Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="tickCheckBoxIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/HoverTickCheckboxIcon.png"/>
+                            <Setter Property="Effect"
+                                    Value="{StaticResource splashScreenWhiteShadowEffect}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver"
+                                           Value="False"/>
+                                <Condition Property="IsChecked"
+                                           Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="tickCheckBoxIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/CheckedTickCheckboxIcon.png"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút bỏ qua-->
+    <Style x:Key="skipButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment"
+                Value="Right"/>
+        <Setter Property="VerticalAlignment"
+                Value="Bottom"/>
+        <Setter Property="BorderThickness"
+                Value="0"/>
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="Background"
+                Value="Transparent"/>
+        <Setter Property="Margin"
+                Value="5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <TextBlock Text="Bỏ qua >>"
+                               Style="{StaticResource splashScreenTextStyle}"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Effect"
+                                    Value="{StaticResource splashScreenWhiteShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+<!--Home Screen-->
+    <!--Kiểu thanh cuộn-->
+    <Style x:Key="scrollThumbStyle"
+           TargetType="{x:Type Thumb}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid x:Name="grid">
+                        <Rectangle x:Name="retangle"
+                                   HorizontalAlignment="Stretch"
+                                   VerticalAlignment="Stretch"
+                                   Fill="Transparent"
+                                   Width="Auto"
+                                   Height="Auto"/>
+                        <Border x:Name="border"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="10"
+                                Width="Auto"
+                                Height="Auto"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Tag"
+                                 Value="Horizontal">
+                            <Setter TargetName="border"
+                                    Property="Width"
+                                    Value="Auto"/>
+                            <Setter TargetName="border"
+                                    Property="Height"
+                                    Value="7"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="{x:Type ScrollBar}"
+           TargetType="{x:Type ScrollBar}">
+        <Setter Property="Stylus.IsFlicksEnabled"
+                Value="False"/>
+        <Setter Property="Foreground"
+                Value="#FF4500"/>
+        <Setter Property="Width"
+                Value="10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollBar}">
+                    <Grid x:Name="gridRoot"
+                          Background="{x:Null}"
+                          Width="12">
+                        <Track x:Name="PART_Track"
+                               Grid.Row="0"
+                               IsDirectionReversed="True"
+                               Focusable="False">
+                            <Track.Thumb >
+                                <Thumb x:Name="thumb"
+                                   Background="{TemplateBinding Foreground}"
+                                   Style="{StaticResource scrollThumbStyle}"/>
+                            </Track.Thumb>
+                            <Track.IncreaseRepeatButton>
+                                <RepeatButton x:Name="pageUp"
+                                              Command="ScrollBar.PageDownCommand"
+                                              Opacity="0"
+                                              Focusable="False"/>
+                            </Track.IncreaseRepeatButton>
+                            <Track.DecreaseRepeatButton>
+                                <RepeatButton x:Name="pageDown"
+                                              Command="ScrollBar.PageUpCommand"
+                                              Opacity="0"
+                                              Focusable="False"/>
+                            </Track.DecreaseRepeatButton>
+                        </Track>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger SourceName="thumb"
+                                 Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="thumb"
+                                    Property="Background"
+                                    Value="#FF4500"/>
+                        </Trigger>
+                        <Trigger SourceName="thumb"
+                                 Property="IsDragging"
+                                 Value="True">
+                            <Setter TargetName="thumb"
+                                    Property="Background"
+                                    Value="#FF4500"/>
+                        </Trigger>
+                        <Trigger SourceName="thumb"
+                                 Property="IsEnabled"
+                                 Value="False">
+                            <Setter TargetName="thumb"
+                                    Property="Visibility"
+                                    Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="Orientation"
+                                 Value="Horizontal">
+                            <Setter TargetName="gridRoot"
+                                    Property="LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="PART_Track"
+                                    Property="LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Width"
+                                    Value="Auto"/>
+                            <Setter Property="Height"
+                                    Value="12"/>
+                            <Setter TargetName="thumb"
+                                    Property="Tag"
+                                    Value="Horizontal"/>
+                            <Setter TargetName="pageDown"
+                                    Property="Command"
+                                    Value="ScrollBar.PageLeftCommand"/>
+                            <Setter TargetName="pageUp"
+                                    Property="Command"
+                                    Value="ScrollBar.PageRightCommand"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Hiệu ứng đổ bóng xám nhạt-->
+    <DropShadowEffect x:Key="homeScreenLightGrayShadowEffect"
+                      BlurRadius="5"
+                      ShadowDepth="0"
+                      Direction="0"
+                      Color="#AFAFAF"/>
+    <!--Hiệu ứng đổ bóng xám vừa-->
+    <DropShadowEffect x:Key="homeScreenGrayShadowEffect"
+                      BlurRadius="10"
+                      ShadowDepth="0"
+                      Direction="270"
+                      Color="#D3D3D3"/>
+    <!--Hiệu ứng đổ bóng xám đậm-->
+    <DropShadowEffect x:Key="homeScreenDarkGrayShadowEffect"
+                      BlurRadius="10"
+                      ShadowDepth="0"
+                      Direction="270"
+                      Color="#696969"/>
+    <!--Hiệu ứng đổ bóng đỏ-->
+    <DropShadowEffect x:Key="homeScreenRedShadowEffect"
+                      BlurRadius="0"
+                      ShadowDepth="0"
+                      Direction="0"
+                      Color="#FA0000"/>
+    <!--Hiệu ứng đổ bóng hồng-->
+    <DropShadowEffect x:Key="homeScreenPinkShadowEffect"
+                      BlurRadius="5"
+                      ShadowDepth="0"
+                      Direction="0"
+                      Color="#FF003A"/>
+    <!--Hiệu ứng đổ bóng cam-->
+    <DropShadowEffect x:Key="homeScreenOrangeShadowEffect"
+                      BlurRadius="5"
+                      ShadowDepth="0"
+                      Direction="0"
+                      Color="#FFA500"/>
+    <!--Hiệu ứng đổ bóng trắng-->
+    <DropShadowEffect x:Key="homeScreenWhiteShadowEffect"
+                      BlurRadius="0"
+                      ShadowDepth="0"
+                      Direction="0"
+                      Color="#FFFFFF"/>
+    <!--Kiểu hộp tìm kiếm-->
+    <Style x:Key="searchTextBoxStyle"
+           TargetType="{x:Type TextBox}">
+        <Setter Property="Background"
+                Value="#F5F5F5"/>
+        <Setter Property="Foreground"
+                Value="#696969"/>
+        <Setter Property="FontFamily"
+                Value="/FoodRecipes;component/Fonts/#Tahoma"/>
+        <Setter Property="FontSize"
+                Value="15"/>
+        <Setter Property="Width"
+                Value="500"/>
+        <Setter Property="Height"
+                Value="40"/>
+        <Setter Property="MaxLength"
+                Value="64"/>
+        <Setter Property="Padding"
+                Value="40 8 10 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                    <Border x:Name="searchTextBoxBorder"
+                            Background="#F5F5F5" 
+                            BorderThickness="2"
+                            BorderBrush="#D3D3D3"
+                            CornerRadius="15">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="searchTextBoxBorder"
+                                    Property="Effect"
+                                    Value="{StaticResource homeScreenGrayShadowEffect}"/>
+                        </Trigger>
+                        <Trigger Property="IsSelectionActive"
+                                 Value="True">
+                            <Setter TargetName="searchTextBoxBorder"
+                                    Property="Effect"
+                                    Value="{StaticResource homeScreenGrayShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút thoát-->
+    <Style x:Key="exitButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Image x:Name="exitButtonIcon"
+                           Source="Assets/Icons/DefaultExitButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="30"
+                           Height="30"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="exitButtonIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/HoverExitButtonIcon.png"/>
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenRedShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút thu nhỏ-->
+    <Style x:Key="minButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Image x:Name="minButtonIcon"
+                           Source="Assets/Icons/MinButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="30"
+                           Height="30"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Background"
+                                    Value="Transparent"/>
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenLightGrayShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút thích-->
+    <Style x:Key="likeCheckboxStyle"
+           TargetType="{x:Type CheckBox}">
+        <Setter Property="Grid.Row"
+                Value="0"/>
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Image x:Name="likeCheckBoxIcon"
+                           Source="Assets/Icons/UncheckedLikeCheckboxIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="22"
+                           Height="22"/>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver"
+                                           Value="True"/>
+                                <Condition Property="IsChecked"
+                                           Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="likeCheckBoxIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/CheckedLikeCheckboxIcon.png"/>
+                            <Setter Property="Focusable"
+                                    Value="False"/>
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenPinkShadowEffect}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver"
+                                           Value="True"/>
+                                <Condition Property="IsChecked"
+                                           Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="likeCheckBoxIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/HoverLikeCheckboxIcon.png"/>
+                            <Setter Property="Focusable"
+                                    Value="False"/>
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenPinkShadowEffect}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver"
+                                           Value="False"/>
+                                <Condition Property="IsChecked"
+                                           Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="likeCheckBoxIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/CheckedLikeCheckboxIcon.png"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút chi tiết-->
+    <Style x:Key="detailButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Grid.Row"
+                Value="1"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Right"/>
+        <Setter Property="VerticalAlignment"
+                Value="Bottom"/>
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="Margin"
+                Value="3 5 3 5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="detailButtonBorder" 
+                            Width="90"
+                            Height="20"
+                            CornerRadius="5">
+                        <TextBlock Text="Xem chi tiết"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   FontWeight="Medium"
+                                   FontSize="13"
+                                   Foreground="White"
+                                   FontFamily="/FoodRecipes;component/Fonts/#Tahoma"/>
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0"
+                                                 EndPoint="1,1">
+                                <GradientStop Color="#FFA500"
+                                              Offset="0"/>
+                                <GradientStop Color="#FF4500"
+                                              Offset="0.5"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="detailButtonBorder"
+                                    Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect BlurRadius="10"
+                                                      ShadowDepth="0"
+                                                      Direction="180"
+                                                      Color="#FFFFFF"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <EventTrigger RoutedEvent="Button.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="detailButtonBorder"
+                                                     Storyboard.TargetProperty="(Background).(LinearGradientBrush.GradientStops)[0].(GradientStop.Offset)"
+                                                     AutoReverse="True"
+                                                     RepeatBehavior="Forever"
+                                                     BeginTime="0:0:0"
+                                                     Duration="0:0:0.25"
+                                                     To="0.5">
+                                    </DoubleAnimation>
+                                    <DoubleAnimation Storyboard.TargetName="detailButtonBorder"
+                                                     Storyboard.TargetProperty="(Background).(LinearGradientBrush.GradientStops)[1].(GradientStop.Offset)"
+                                                     AutoReverse="True"
+                                                     RepeatBehavior="Forever"
+                                                     BeginTime="0:0:0"
+                                                     Duration="0:0:0.25"
+                                                     To="1">
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Button.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="detailButtonBorder"
+                                                         Storyboard.TargetProperty="(Background).(LinearGradientBrush.GradientStops)[0].(GradientStop.Offset)"
+                                                         FillBehavior="HoldEnd"
+                                                         BeginTime="0:0:0"
+                                                         Duration="0:0:0"
+                                                         To="0">
+                                        </DoubleAnimation>
+                                        <DoubleAnimation Storyboard.TargetName="detailButtonBorder"
+                                                         Storyboard.TargetProperty="(Background).(LinearGradientBrush.GradientStops)[1].(GradientStop.Offset)"
+                                                         FillBehavior="HoldEnd"
+                                                         BeginTime="0:0:0"
+                                                         Duration="0:0:0"
+                                                         To="0.5">
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút trang sau-->
+    <Style x:Key="nextButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Right"/>
+        <Setter Property="Margin"
+                Value="0 35 22 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Image x:Name="nextButtonIcon"
+                           Source="Assets/Icons/NextButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="60"
+                           Height="60"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenOrangeShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút trang trước-->
+    <Style x:Key="previousButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"/>
+        <Setter Property="Margin"
+                Value="20 35 0 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Image x:Name="previousButtonIcon"
+                           Source="Assets/Icons/PreviousButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="60"
+                           Height="60"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenOrangeShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="directionChangePageButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Width"
+                Value="30"/>
+        <Setter Property="Height"
+                Value="30"/>
+        <Setter Property="Margin"
+                Value="5"/>
+        <Setter Property="Background"
+                Value="Transparent"/>
+        <Setter Property="BorderThickness"
+                Value="0"/>
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <TextBlock Text="{Binding}"
+                               Focusable="False"
+                               FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                               FontSize="20"
+                               FontWeight="Heavy"
+                               Foreground="#696969"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút lọc-->
+    <Style x:Key="filterButtonStyle"
+           TargetType="{x:Type ToggleButton}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Right"/>
+        <Setter Property="VerticalAlignment"
+                Value="Top"/>
+        <Setter Property="Margin"
+                Value="0 25 395 25"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="filterButtonBorder"
+                            CornerRadius="5"
+                            Background="#FFFFFF"
+                            Effect="{StaticResource homeScreenLightGrayShadowEffect}">
+                        <Image x:Name="filterButtonIcon"
+                           Source="Assets/Icons/OffFilterButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="30"
+                           Height="30"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenGrayShadowEffect}"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked"
+                                 Value="True">
+                            <Setter TargetName="filterButtonBorder"
+                                    Property="Background"
+                                    Value="#FF4500"/>
+                            <Setter TargetName="filterButtonIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/OnFilterButtonIcon.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút thêm-->
+    <Style x:Key="addButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Right"/>
+        <Setter Property="VerticalAlignment"
+                Value="Top"/>
+        <Setter Property="Margin"
+                Value="0 25 130 25"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Image x:Name="addButtonIcon"
+                           Source="Assets/Icons/AddButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="30"
+                           Height="30"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenGrayShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút xóa-->
+    <Style x:Key="deleteButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="IsEnabled"
+                Value="False"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Right"/>
+        <Setter Property="VerticalAlignment"
+                Value="Top"/>
+        <Setter Property="Margin"
+                Value="0 25 100 25"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Image x:Name="deleteButtonIcon"
+                           Source="Assets/Icons/DisabledDeleteButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="30"
+                           Height="30"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenLightGrayShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút hiển thị ưa thích-->
+    <Style x:Key="showFavoriteCheckBoxStyle"
+           TargetType="{x:Type CheckBox}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"/>
+        <Setter Property="VerticalAlignment"
+                Value="Center"/>
+        <Setter Property="Margin"
+                Value="5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Image x:Name="showFavoriteCheckBoxIcon"
+                           Source="Assets/Icons/OffShowFavoriteCheckBoxIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="30"
+                           Height="30"/>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver"
+                                           Value="True"/>
+                                <Condition Property="IsChecked"
+                                           Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="showFavoriteCheckBoxIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/OnShowFavoriteCheckBoxIcon.png"/>
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenOrangeShadowEffect}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver"
+                                           Value="True"/>
+                                <Condition Property="IsChecked"
+                                           Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="showFavoriteCheckBoxIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/HoverShowFavoriteCheckBoxIcon.png"/>
+                            <Setter Property="Effect"
+                                    Value="{StaticResource homeScreenOrangeShadowEffect}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver"
+                                           Value="False"/>
+                                <Condition Property="IsChecked"
+                                           Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="showFavoriteCheckBoxIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/OnShowFavoriteCheckBoxIcon.png"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+<!--Add Screen, Detail Screen-->
+    <!--Hiệu ứng đổ bóng xám nhạt-->
+    <DropShadowEffect x:Key="addAndDetailScreenLightGrayShadowEffect"
+                      BlurRadius="10"
+                      ShadowDepth="0"
+                      Direction="0"
+                      Color="#D3D3D3"/>
+    <!--Hiệu ứng đổ bóng xám vừa-->
+    <DropShadowEffect x:Key="addAndDetailScreenGrayShadowEffect"
+                      BlurRadius="0"
+                      ShadowDepth="0"
+                      Direction="0"
+                      Color="#D3D3D3"/>
+    <!--Hiệu ứng đổ bóng xám đậm-->
+    <DropShadowEffect x:Key="addAnddetailScreenDarkGrayShadowEffect"
+                      BlurRadius="0"
+                      ShadowDepth="0"
+                      Direction="0"
+                      Color="#696969"/>
+    <!--Hiệu ứng đổ bóng cam-->
+    <DropShadowEffect x:Key="addAnddetailScreenOrangeShadowEffect"
+                      BlurRadius="2"
+                      ShadowDepth="0"
+                      Direction="0"
+                      Color="#FFA500"/>
+    <!--Hiệu ứng đổ bóng trắng-->
+    <DropShadowEffect x:Key="addAnddetailScreenWhiteShadowEffect"
+                      BlurRadius="10"
+                      ShadowDepth="2"
+                      Direction="90"
+                      Color="#FFFFFF"/>
+    <!--Kiểu nút trở về-->
+    <Style x:Key="backButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="IsCancel"
+                Value="True"/>
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="VerticalAlignment"
+                Value="Top"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"/>
+        <Setter Property="Margin"
+                Value="10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Image x:Name="backButtonIcon"
+                           Source="Assets/Icons/BackButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="30"
+                           Height="30"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="backButtonIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/BackButtonIcon.png"/>
+                            <Setter Property="Effect"
+                                    Value="{StaticResource addAnddetailScreenDarkGrayShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút cuộn lên/xuống-->
+    <Style x:Key="growButtonStyle"
+           TargetType="{x:Type ToggleButton}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="VerticalAlignment"
+                Value="Top"/>
+        <Setter Property="IsChecked"
+                Value="True"/>
+        <Setter Property="Margin"
+                Value="0 -16 0 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Grid Height="20"
+                          Width="20">
+                        <Border CornerRadius="20"
+                                Opacity="0.9"
+                                Background="#000000"/>
+                        <Image x:Name="growButtonIcon"
+                               Source="Assets/Icons/GrowDownButtonIcon.png"
+                               RenderOptions.BitmapScalingMode="HighQuality"
+                               Stretch="Fill"
+                               Width="16"
+                               Height="16"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked"
+                                 Value="False">
+                            <Setter TargetName="growButtonIcon"
+                                    Property="Source"
+                                    Value="Assets/Icons/GrowUpButtonIcon.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút bước sau-->
+    <Style x:Key="nextStepButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Right"/>
+        <Setter Property="Margin"
+                Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Image x:Name="nextStepButtonIcon"
+                           Source="Assets/Icons/NextStepButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="40"
+                           Height="40"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Effect"
+                                    Value="{StaticResource addAnddetailScreenDarkGrayShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút bước trước-->
+    <Style x:Key="previousStepButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="HorizontalAlignment"
+                Value="Left"/>
+        <Setter Property="Margin"
+                Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Image x:Name="previousStepButtonIcon"
+                           Source="Assets/Icons/PreviousStepButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="40"
+                           Height="40"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Effect"
+                                    Value="{StaticResource addAnddetailScreenDarkGrayShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút xem video-->
+    <Style x:Key="playVideoButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment"
+                Value="Center"/>
+        <Setter Property="VerticalAlignment"
+                Value="Center"/>
+        <Setter Property="Grid.Column"
+                Value="1"/>
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel x:Name="playVideoButtonStackPanel">
+                        <TextBlock x:Name="playVideoButtonText"
+                                   Text="Video"
+                                   TextAlignment="Center"
+                                   TextWrapping="WrapWithOverflow"
+                                   Foreground="#FFFFFF"
+                                   FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                                   FontSize="16"
+                                   FontWeight="Medium"/>
+                        <Image x:Name="playVideoButtonIcon"
+                               Source="Assets/Icons/PlayButtonIcon.png"
+                               RenderOptions.BitmapScalingMode="HighQuality"
+                               Stretch="Fill"
+                               Width="35"
+                               Height="35"/>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Effect"
+                                    Value="{StaticResource addAnddetailScreenWhiteShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu hộp điền-->
+    <Style x:Key="fillTextBoxStyle"
+           TargetType="{x:Type TextBox}">
+        <Setter Property="Background"
+                Value="#FFFFFF"/>
+        <Setter Property="Foreground"
+                Value="#696969"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                    <Border x:Name="fillTextBoxBorder"
+                            Background="#FFFFFF" 
+                            BorderThickness="1"
+                            BorderBrush="#696969"
+                            CornerRadius="10">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="fillTextBoxBorder"
+                                    Property="BorderBrush"
+                                    Value="#FF4500"/>
+                        </Trigger>
+                        <Trigger Property="IsSelectionActive"
+                                 Value="True">
+                            <Setter TargetName="fillTextBoxBorder"
+                                    Property="Background"
+                                    Value="#FAFAD2"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút xác định thêm-->
+    <Style x:Key="addConfirmButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="VerticalAlignment"
+                Value="Bottom"/>
+        <Setter Property="Width"
+                Value="80"/>
+        <Setter Property="Height"
+                Value="40"/>
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="IsEnabled"
+                Value="False"/>
+        <Setter Property="Margin"
+                Value="0 0 0 30"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="addConfirmButtonBorder"
+                            CornerRadius="5"
+                            Background="#FF4500"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+                        <TextBlock x:Name="addConfirmButtonText"
+                                   Text="THÊM"
+                                   TextAlignment="Center"
+                                   Foreground="#FFFFFF"
+                                   FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                                   FontSize="18"
+                                   FontWeight="Heavy"
+                                   Padding="8 8 8 5"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled"
+                                 Value="False">
+                            <Setter TargetName="addConfirmButtonBorder"
+                                    Property="Background"
+                                    Value="#696969"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="addConfirmButtonBorder"
+                                    Property="Effect"
+                                    Value="{StaticResource addAnddetailScreenDarkGrayShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút thêm bước-->
+    <Style x:Key="addStepButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment"
+                Value="Right"/>
+        <Setter Property="Width"
+                Value="160"/>
+        <Setter Property="Height"
+                Value="40"/>
+        <Setter Property="Margin"
+                Value="10 10 10 5"/>
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="addStepButtonBorder"
+                            CornerRadius="5"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0"
+                                                 EndPoint="1,1">
+                                <GradientStop Color="#008000"
+                                              Offset="0"/>
+                                <GradientStop Color="#9ACD32"
+                                              Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <TextBlock x:Name="addStepButtonText"
+                                   Text="+ Thêm bước"
+                                   TextAlignment="Center"
+                                   Foreground="#FFFFFF"
+                                   FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                                   FontSize="18"
+                                   FontWeight="Medium"
+                                   Padding="15 6 15 5"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="addStepButtonBorder"
+                                    Property="Effect"
+                                    Value="{StaticResource addAnddetailScreenDarkGrayShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Kiểu nút duyệt-->
+    <Style x:Key="browseButtonStyle"
+           TargetType="{x:Type Button}">
+        <Setter Property="Focusable"
+                Value="False"/>
+        <Setter Property="VerticalAlignment"
+                Value="Top"/>
+        <Setter Property="Margin"
+                Value="10 0 10 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Image x:Name="browseButtonIcon"
+                           Source="Assets/Icons/BrowseButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Stretch="Fill"
+                           Width="40"
+                           Height="40"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter Property="Effect"
+                                    Value="{StaticResource addAnddetailScreenDarkGrayShadowEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
+    

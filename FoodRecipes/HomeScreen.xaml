@@ -1,0 +1,475 @@
+﻿<Window x:Class="FoodRecipes.HomeScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodRecipes"
+        mc:Ignorable="d"
+        x:Name="homeScreen"
+        Title="Food Recipes"
+        Background="#000000"
+        WindowState="Maximized"
+        Icon="Assets/Icons/FoodRecipesLogo.ico"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Loaded="homeScreen_Loaded"
+        Closed="homeScreen_Closed">
+    <Grid>
+        <!--Vùng màn hình home screen-->
+        <Grid x:Name="homeScreenGrid">
+            <!--Vùng hiển thị chính-->
+            <Grid x:Name="mainGrid"
+                  Background="#FFFFFF"
+                  Opacity="1">
+                <!--Danh sách dữ liệu-->
+                <ListView x:Name="dataListView"
+                          Background="Transparent"
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                          Focusable="False"
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Left"
+                          BorderThickness="0"
+                          Padding="80 90 40 0">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="IsTabStop"
+                                    Value="False" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <ContentPresenter/>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected"
+                                                     Value="True">
+                                                <Setter Property="Effect"
+                                                        Value="{StaticResource homeScreenDarkGrayShadowEffect}"/>
+                                                <Setter Property="Focusable"
+                                                        Value="False"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"
+                                       HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <DataTemplate.Triggers>
+                                <Trigger Property="IsMouseOver"
+                                         Value="True">
+                                    <Setter Property="Effect"
+                                            Value="{StaticResource homeScreenDarkGrayShadowEffect}"/>
+                                </Trigger>
+                            </DataTemplate.Triggers>
+                            <!--Khung item-->
+                            <Border x:Name="itemBorder"
+                                    CornerRadius="5"
+                                    BorderBrush="OrangeRed"
+                                    BorderThickness="1"
+                                    Background="#FFFFFF"
+                                    Width="200"
+                                    Height="270"
+                                    Margin="20"
+                                    Effect="{StaticResource homeScreenGrayShadowEffect}">
+                                <!--Vùng item-->
+                                <Grid x:Name="itemGrid">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="170"/>
+                                        <RowDefinition Height="100"/>
+                                    </Grid.RowDefinitions>
+                                    <!--Khung mô tả-->
+                                    <Border x:Name="descriptionImageBorder"
+                                            CornerRadius="5 5 0 0"
+                                            Grid.Row="0">
+                                        <Border.Background>
+                                            <ImageBrush x:Name="descriptionImage"
+                                                        ImageSource="{Binding image, Converter={StaticResource relativeToAbsolutePathConverter}}"
+                                                        RenderOptions.BitmapScalingMode="HighQuality"
+                                                        Stretch="UniformToFill"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <!--Khung nút thích-->
+                                    <Border x:Name="likeCheckBoxBorder"
+                                            CornerRadius="5"
+                                            Background="#FFFFFF"
+                                            VerticalAlignment="Bottom"
+                                            HorizontalAlignment="Right"
+                                            Width="26"
+                                            Height="26"
+                                            Margin="2">
+                                        <!--Nút thích-->
+                                        <CheckBox x:Name="likeCheckBox"
+                                                  IsChecked="{Binding favorite}"
+                                                  Style="{StaticResource likeCheckboxStyle}"
+                                                  Unchecked="likeCheckBox_Unchecked"/>
+                                    </Border>
+                                    <!--Vùng tóm tắt-->
+                                    <Grid x:Name="summaryGrid"
+                                          Grid.Row="2"
+                                          Margin="5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="40"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <!--Đường kẻ-->
+                                        <Border x:Name="line"
+                                                BorderBrush="#D3D3D3"
+                                                BorderThickness="0 0 0 2">
+                                            <!--Tên món ăn-->
+                                            <TextBlock x:Name="foodName"
+                                                   Grid.Row="0"
+                                                   Text="{Binding foodName}"
+                                                   TextWrapping="Wrap"
+                                                   FontWeight="Heavy"
+                                                   FontSize="16"
+                                                   Foreground="#696969"
+                                                   VerticalAlignment="Top"
+                                                   HorizontalAlignment="Left"
+                                                   FontFamily="/FoodRecipes;component/Fonts/#Tahoma"/>
+                                        </Border>
+                                        <!--Loại món ăn-->
+                                        <TextBlock x:Name="foodType"
+                                                   Grid.Row="1"
+                                                   Text="{Binding foodType}"
+                                                   FontWeight="Medium"
+                                                   FontSize="15"
+                                                   Foreground="#696969"
+                                                   VerticalAlignment="Center"
+                                                   HorizontalAlignment="Left"
+                                                   FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                                                   Padding="0 0 0 10"/>
+                                        <StackPanel Orientation="Horizontal"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Left"
+                                                    Grid.Row="2">
+                                            <!--Thời gian-->
+                                            <TextBlock x:Name="timeConsumingText"
+                                                       Text="{Binding time}"
+                                                       FontWeight="Medium"
+                                                       FontSize="14"
+                                                       Foreground="#696969"
+                                                       FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                                                       Padding="0 0 0 10"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <!--Nút chi tiết-->
+                                    <Button x:Name="detailButton"
+                                            Style="{StaticResource detailButtonStyle}"
+                                            Click="detailButton_Click"/>
+                                </Grid>
+                                <Border.Triggers>
+                                    <EventTrigger RoutedEvent="Border.MouseEnter">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ColorAnimation Storyboard.TargetName="itemBorder"
+                                                                Storyboard.TargetProperty="BorderBrush.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.2"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#D3D3D3"/>
+                                                <ColorAnimation Storyboard.TargetName="itemBorder"
+                                                                Storyboard.TargetProperty="Background.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.2"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#999999"/>
+                                                <ColorAnimation Storyboard.TargetName="foodName"
+                                                                Storyboard.TargetProperty="Foreground.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.2"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#FFFFFF"/>
+                                                <ColorAnimation Storyboard.TargetName="foodType"
+                                                                Storyboard.TargetProperty="Foreground.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.2"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#FFFFFF"/>
+                                                <ColorAnimation Storyboard.TargetName="timeConsumingText"
+                                                                Storyboard.TargetProperty="Foreground.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.2"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#FFFFFF"/>
+                                                <ColorAnimation Storyboard.TargetName="line"
+                                                                Storyboard.TargetProperty="BorderBrush.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.2"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#D0D0D0"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                    <EventTrigger RoutedEvent="Border.MouseLeave">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ColorAnimation Storyboard.TargetName="itemBorder"
+                                                                Storyboard.TargetProperty="Background.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.1"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#FFFFFF"/>
+                                                <ColorAnimation Storyboard.TargetName="itemBorder"
+                                                                Storyboard.TargetProperty="BorderBrush.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.2"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#FF4500"/>
+                                                <ColorAnimation Storyboard.TargetName="foodName"
+                                                                Storyboard.TargetProperty="Foreground.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.1"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#696969"/>
+                                                <ColorAnimation Storyboard.TargetName="foodType"
+                                                                Storyboard.TargetProperty="Foreground.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.1"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#696969"/>
+                                                <ColorAnimation Storyboard.TargetName="timeConsumingText"
+                                                                Storyboard.TargetProperty="Foreground.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.1"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#696969"/>
+                                                <ColorAnimation Storyboard.TargetName="line"
+                                                                Storyboard.TargetProperty="BorderBrush.Color"
+                                                                BeginTime="0:0:0"
+                                                                Duration="0:0:0.2"
+                                                                FillBehavior="HoldEnd"
+                                                                To="#D3D3D3"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </Border.Triggers>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--Thông báo-->
+                <TextBlock x:Name="notificationText"
+                           Text="Không có kết quả phù hợp."
+                           Visibility="Hidden"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontSize="16"
+                           Foreground="#696969"/>
+                <!--Vùng tìm kiếm-->
+                <Grid x:Name="searchGrid"
+                      VerticalAlignment="Top"
+                      HorizontalAlignment="Center"
+                      Margin="20">
+                    <!--Hộp tìm kiếm-->
+                    <TextBox x:Name="searchBox"
+                             Style="{StaticResource searchTextBoxStyle}"
+                             TextChanged="searchBox_TextChanged"/>
+                    <!--Biểu tượng tìm kiếm-->
+                    <Image x:Name="searchIcon"
+                           Source="Assets/Icons/SearchButtonIcon.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           HorizontalAlignment="Left"
+                           Width="30"
+                           Height="30"
+                           Margin="5"/>
+                </Grid>
+                <!--Danh sách phân loại món ăn-->
+                <ListView x:Name="classificationListView"
+                          Background="Transparent"
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                          Focusable="False"
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Center"
+                          Visibility="{Binding ElementName=filterButton, Path=IsChecked, Converter={StaticResource booleanToVisibilityConverter}}"
+                          BorderThickness="0"
+                          Width="730"
+                          Height="60"
+                          Margin="0 52 0 0"
+                          SelectionChanged="classificationListView_SelectionChanged">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="IsTabStop"
+                                    Value="False" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <ContentPresenter/>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected"
+                                                     Value="True">
+                                                <Setter Property="Effect"
+                                                        Value="{StaticResource homeScreenDarkGrayShadowEffect}"/>
+                                                <Setter Property="Focusable"
+                                                        Value="False"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"
+                                       HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!--Khung item-->
+                            <Border x:Name="itemBorder"
+                                    CornerRadius="5"
+                                    BorderThickness="0"
+                                    Background="#696969"
+                                    Width="100"
+                                    Height="40"
+                                    Margin="5">
+                                <TextBlock Text="{Binding}"
+                                           Foreground="#FFFFFF"
+                                           FontWeight="Bold"
+                                           FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                                           FontSize="14"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"/>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--Nút lọc-->
+                <ToggleButton x:Name="filterButton"
+                              Style="{StaticResource filterButtonStyle}"
+                              Unchecked="filterButton_Unchecked">
+                    <ToggleButton.Triggers>
+                        <EventTrigger RoutedEvent="ToggleButton.Checked">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ThicknessAnimation Storyboard.TargetName="dataListView"
+                                                        Storyboard.TargetProperty="Margin"
+                                                        BeginTime="0:0:0"
+                                                        Duration="0:0:0.2"
+                                                        FillBehavior="HoldEnd"
+                                                        To="0 30 0 0"/>
+                                    <ThicknessAnimation Storyboard.TargetName="pageInfomationText"
+                                                        Storyboard.TargetProperty="Margin"
+                                                        BeginTime="0:0:0"
+                                                        Duration="0:0:0.2"
+                                                        FillBehavior="HoldEnd"
+                                                        To="10"/>
+                                    <DoubleAnimation Storyboard.TargetName="classificationListView"
+                                                     Storyboard.TargetProperty="Opacity"
+                                                     BeginTime="0:0:0"
+                                                     Duration="0:0:0.2"
+                                                     FillBehavior="HoldEnd"
+                                                     To="1"/>
+                                    <ThicknessAnimation Storyboard.TargetName="classificationListView"
+                                                        Storyboard.TargetProperty="Margin"
+                                                        BeginTime="0:0:0"
+                                                        Duration="0:0:0.2"
+                                                        FillBehavior="HoldEnd"
+                                                        To="0 72 0 0"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ThicknessAnimation Storyboard.TargetName="dataListView"
+                                                        Storyboard.TargetProperty="Margin"
+                                                        BeginTime="0:0:0"
+                                                        Duration="0:0:0.2"
+                                                        FillBehavior="HoldEnd"
+                                                        To="0"/>
+                                    <ThicknessAnimation Storyboard.TargetName="pageInfomationText"
+                                                        Storyboard.TargetProperty="Margin"
+                                                        BeginTime="0:0:0"
+                                                        Duration="0:0:0.2"
+                                                        FillBehavior="HoldEnd"
+                                                        To="30"/>
+                                    <DoubleAnimation Storyboard.TargetName="classificationListView"
+                                                     Storyboard.TargetProperty="Opacity"
+                                                     BeginTime="0:0:0"
+                                                     Duration="0:0:0.2"
+                                                     FillBehavior="HoldEnd"
+                                                     To="0"/>
+                                    <ThicknessAnimation Storyboard.TargetName="classificationListView"
+                                                        Storyboard.TargetProperty="Margin"
+                                                        BeginTime="0:0:0"
+                                                        Duration="0:0:0.2"
+                                                        FillBehavior="HoldEnd"
+                                                        To="0 52 0 0"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </ToggleButton.Triggers>
+                </ToggleButton>
+                <!--Hiển thị món ưa thích-->
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right"
+                            Margin="0 25 210 0">
+                    <CheckBox x:Name="showFavoriteCheckBox"
+                              Style="{StaticResource showFavoriteCheckBoxStyle}"
+                              Checked="showFavoriteCheckBox_Checked"
+                              Unchecked="showFavoriteCheckBox_Unchecked"/>
+                    <TextBlock x:Name="favoriteText"
+                               Text="Món ưa thích"
+                               VerticalAlignment="Center"
+                               FontWeight="Medium"
+                               FontSize="16"
+                               Foreground="#FF4500"/>
+                </StackPanel>
+                <!--Nút thêm-->
+                <Button x:Name="addButton"
+                        Style="{StaticResource addButtonStyle}"
+                        Click="addButton_Click"/>
+                <!--Nút xóa-->
+                <Button x:Name="deleteButton"
+                        Style="{StaticResource deleteButtonStyle}"/>
+                <!--Nút trang sau-->
+                <Button x:Name="nextButton"
+                        Style="{StaticResource nextButtonStyle}"
+                        Click="nextButton_Click"/>
+                <!--Nút trang trước-->
+                <Button x:Name="previousButton"
+                        Style="{StaticResource previousButtonStyle}"
+                        Click="previousButton_Click"/>
+                <!--Thông tin phân trang-->
+                <TextBlock x:Name="pageInfomationText"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"
+                           FontSize="22"
+                           Foreground="#696969"
+                           FontWeight="Heavy"
+                           FontFamily="/FoodRecipes;component/Fonts/#Tahoma"
+                           Margin="30"/>
+            </Grid>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Margin="5">
+                <!--Nút thu nhỏ-->
+                <Button x:Name="minButton"
+                        Style="{StaticResource minButtonStyle}"
+                        Click="minButton_Click"/>
+                <!--Nút thoát-->
+                <Button x:Name="exitButton"
+                        Style="{StaticResource exitButtonStyle}"
+                        Click="exitButton_Click"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="coverGrid"
+                  Background="#000000"
+                  Opacity="0.5"
+                  Visibility="Collapsed"/>
+    </Grid>
+</Window>

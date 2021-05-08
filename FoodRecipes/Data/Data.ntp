@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <splashScreenDisabled>false</splashScreenDisabled>
+  <recipes>
+    <Recipe>
+      <foodName>Bánh da lợn</foodName>
+      <description>Bánh được làm từ bột năng, đường trắng, dừa nạo, Vani hay lá dứa và một số gia vị khác.</description>
+      <image>02900.jpg</image>
+      <video>https://www.youtube.com/watch?v=0B3L5-Wjl-o</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Tráng miệng</foodType>
+      <steps>
+        <Step>
+          <content>- 110g đậu xanh (đã bỏ vỏ).
+- 300g bột năng.
+- 650ml nước cốt dừa.
+- 10 lá dứa.
+- 100g bột gạo tẻ.
+- 370g đường.</content>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Rửa sạch lá dứa, cắt thành từng khúc ngắn, nhỏ và cho vào xay nhuyễn. Dùng rây lọc phần nước cốt để riêng.
+Trộn đều 370g đường, 300g bột năng, 100g bột gạo tẻ với nhau trong một tô lớn.
+Hòa 350ml nước với nước cốt dừa để được 1l nước cốt dừa loãng.
+Cho đậu xanh vào ngâm với nước lạnh cho mềm. Sau đó cho vào nồi, đổ một chút nước vào đun sôi. Chờ khi nước sôi thì chắt bỏ bớt nước rồi chắt bỏ bớt nước, đậy vung lại cho đậu chín bằng hơi.
+Khi đậu đã chín bở, bạn bỏ đậu ra ngoài chờ cho nguội.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Trộn hỗn hợp bột đã chuẩn bị với 1l nước cốt dừa. Sau đó, lọc qua rây để được hỗn hợp bột mịn.
+Sau đó, chia bột làm hai phần. Một phần đem xay chung với đậu xanh, một phần trộn chung với nước lá dứa.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Để chống dính, trước khi hấp bánh, bạn phết một lớp dầu ăn lên khuôn hấp hoặc lót giấy nến.
+Đổ một lớp bột lá dứa, bọc lên một miếng vải, đậy nắp và hấp đến khi thấy bột chuyển màu trong thì lại đổ tiếp một lớp bột đậu xanh. Cứ làm như vậy đến khi hết bột.</content>
+          <guideImage>02922.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Khi bánh đã chín đều, đợi bánh nguội và còn ấm nóng thì cuộn bánh lại. Để bánh không bị tuột cần phải cuộn chặt và dứt khoát.</content>
+          <guideImage>02930.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Bún bò Huế</foodName>
+      <description>Bún bò là một trong những đặc sản của xứ Huế, mặc dù món bún này phổ biến trên cả ba miền ở Việt Nam và cả người Việt tại hải ngoại. Tại Huế, món này được gọi đơn giản là 'bún bò' hoặc gọi cụ thể hơn là 'bún bò giò heo'.</description>
+      <image>00500.jpg</image>
+      <video>https://www.youtube.com/watch?v=07u9-crCCOY</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 600g bắp bò.
+- 600g nạm bò.
+- 400g gân bò.
+- 800g giò heo.
+- 1kg xương ống hoặc xương giá.
+- 3 muỗng canh mắm ruốc Huế.
+- 6 cây sả.</content>
+          <guideImage>00510.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Sả, gừng rửa sạch, đập dập. Giò heo lóc xương. Phần bắp heo cuộn lại, dùng chỉ hoặc sợi lát buộc chắc.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Bắc chảo nước sôi trụng sơ xương và bắp bò, nạm bò, gân bò, giò heo. Cắt gân thành miếng vừa ăn. Pha 3 muỗng canh mắm ruốc Huế với 1/2 chén nước, quậy cho hòa đều.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Ướp tất cả thịt với 2 muỗng canh đường, 1 muỗng canh muối, 1/2 muỗng canh bột ngọt, 1 muỗng canh mắm ruốt (đã pha loãng), 2 muỗng canh hành tím băm, 2 muỗng canh tỏi băm, 2 muỗng canh sả băm.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Lót 3 cây sả và 1/2 lượng gừng ở đáy nối áp suất, cho xương heo và thịt giò heo vào, cho nước sâm sấp mặt thịt, đậy kín nắp, đun sôi 5 phút. Tắt bếp, đợi nước trong nồi hết reo thì mở nắp, vớt bắp giò heo ra thau nước lạnh.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Phần nước hầm thịt bò và nước hầm xương đong chung, thêm nước lạnh cho vừa 5l nước.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Đun sôi, nêm gia vị: 3 muỗng canh nước mắm, 2 muỗng canh muối, 2 muỗng canh đường, 2 muỗng café bột ngọt, chén mắm ruốt Huế đã pha loãng. Nếm thử và điều chỉnh gia vị cho vừa khẩu vị nhà bạn.</content>
+          <guideImage>00530.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Bồ câu quay nước dừa</foodName>
+      <description>Thịt bồ câu quay kết hợp với nước dừa béo ngậy rất thích hợp để tiếp đãi bạn bè trong mỗi buổi tiệc.</description>
+      <image>02400.jpg</image>
+      <video>https://www.youtube.com/watch?v=HrsUrlEgkz8</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 4 con bồ câu.
+- 1 trái dừa xiêm.
+- Hành lá, hành tím, tỏi.
+- Muối, tiêu, ngũ vị hương.
+- Hạt nêm.</content>
+          <guideImage>02410.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Hành tím, tỏi, đầu hành lá bằm nhuyễn.
+Bồ câu làm sạch, ướp với 2 muỗng hành lá, 2 muỗng hành tím, 1 muỗng  tỏi, 1/2 muỗng muối, 1 muỗng nước tương , 2 muỗng hạt nêm , 1 ít tiêu và 1 muỗng ngũ vị hương, để thấm.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Đun nóng dầu, cho bồ câu vào chiên vàng rồi thêm nước dừa vào, đun lửa vừa, thỉnh thoảng trở mặt. Quay bồ câu khoảng 20 phút thì tắt bếp.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Dùng kéo cắt đôi miếng thịt, xếp ra dĩa, dùng nóng với muối tiêu chanh và xà lách trộn.</content>
+          <guideImage>02430.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Cacao nóng</foodName>
+      <description>Được chế biến từ trái cacao nguyên chất, cacao nóng là thức uống rất tốt cho mùa đông lạnh.</description>
+      <image>01000.jpg</image>
+      <video>https://www.youtube.com/watch?v=pJD6TQz_jkc</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Thức uống</foodType>
+      <steps>
+        <Step>
+          <content>- 3 muỗng bột ca cao.
+- 40ml sữa đặc.
+- 60ml nước nóng.
+- 1 ít vani (nếu cần để tạo mùi thơm).</content>
+          <guideImage>01010.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Bỏ toàn bộ ca cao và sữa đặc vào ly sau đó rót 50% nước nóng dùng muỗng đánh đều đến khi lên bọt.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Rót toàn bộ phần nước còn lại vào và quậy đều sau đó thưởng thức ngay khi còn nóng.
+Nếu muốn có thêm mùi thơm, bạn có thể cho một ít vani vào ngay khi ca cao còn nóng.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Một ly cacao nóng thơm phức, xóa tan cái lạnh của mùa đông</content>
+          <guideImage>01030.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Cacao sữa đá</foodName>
+      <description>Được chế biến từ trái cacao nguyên chất, thêm một chút sữa ta sẽ có được món cacao sữa mát lạnh rất tốt cho mùa đông hè.</description>
+      <image>01100.jpg</image>
+      <video>https://www.youtube.com/watch?v=MWTX8qXzgPg</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Thức uống</foodType>
+      <steps>
+        <Step>
+          <content>- 4 muỗng bột cacao nguyên chất.
+- 30ml sữa đặc.
+- 40ml sữa tươi không đường.
+- 20ml nước nóng.
+- Đá viên.</content>
+          <guideImage>01110.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Cho toàn bộ ca cao và sữa đặc vào ly.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Rót 20ml nước nóng vào dùng muỗng đánh đều tay cho ca cao lên bọt.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho toàn bột phần sữa tươi không đường vào ly đánh đều tay tránh để ca cao vón cục.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Bỏ đá viên vào và thưởng thức.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Một ly ca cao sữa đá mát lạnh trong mùa hè oi ả.</content>
+          <guideImage>01130.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Canh chua cá lóc</foodName>
+      <description>Món ăn dinh dưỡng, nấu theo phong cách ẩm thực miền tây.</description>
+      <image>01700.jpg</image>
+      <video>https://www.youtube.com/watch?v=QEqCMTmDQ9U</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 1 con cá lóc đã sơ chế cà cắt từng khúc.
+- 2 khúc mùng.
+- 2 quả cà chua.
+- 1 chút rau giá, rau ngổ.
+- 2 lát thơm.
+- 5 trái đậu bắp.
+- 1 quả me chua.
+- 3 cọng hành lá.
+- Gia vị mắm muối.</content>
+          <guideImage>01710.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Cho cà chua vào đảo qua với dầu 2 phút.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho cá lóc đã cắt khúc vào đảo qua lần nữa.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho 1,5l nước đun.</content>
+          <guideImage>01722.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Tới khi sôi cho toàn bộ rau, gia vị vào. Đúng là nồi canh chua cá lóc ngon tuyệt.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Món canh chưa cá lóc ăn rất mát vào mùa hè, ấm vào mùa đông, cả nhà có bữa cơm ngon tuyệt.</content>
+          <guideImage>01730.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Cháo bồ câu nấu đậu xanh</foodName>
+      <description>Món ăn nhẹ nhàng và giàu dinh dưỡng cho mọi người, đặc biệt đối với bà bầu.</description>
+      <image>01300.jpg</image>
+      <video>https://www.youtube.com/watch?v=UQh51B3Iblk</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Khai vị</foodType>
+      <steps>
+        <Step>
+          <content>- Một con bồ câu non.
+- 200gr đậu xanh.
+- 1 bát gạo.
+- 2 thìa nước nắm.
+- 1 thìa mì chính.
+- 1 thìa hạt nêm.
+- 1 thìa muối.
+- Hành lá thái nhỏ.</content>
+          <guideImage>01310.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Đầu tiên rang gạo chuyển thành màu vàng nhạt.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho gạo vào nồi nước vừa phải, nấu đến khi thành cháo.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho chim bồ câu đã làm sạch, cùng với đậu xanh đã ngâm vào và cho toàn bộ gia vị có sẵn, đợt đến khi bồ câu chín là xong món cháo bồ câu nấu đậu xanh.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Nồi cháo chim bồ câu đậu xanh siêu ngon cho các bà mẹ bầu, và em bé.</content>
+          <guideImage>01330.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Chân gà ngâm sả tắc</foodName>
+      <description>Chân gà ngâm sả tắc là một trong những món ăn vặt hấp dẫn được nhiều người yêu thích. Tuy vậy, không phải bất cứ ai cũng biết cách làm chân gà ngâm sả tắc đúng chuẩn, trọn vị.</description>
+      <image>00200.jpg</image>
+      <video>https://www.youtube.com/watch?v=lp3orH1rhIc</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Khai vị</foodType>
+      <steps>
+        <Step>
+          <content>- 10-15 chân gà
+- 10 cây sả
+- 1 củ gừng
+- 10-15 quả tắc
+- 10 quả ớt.</content>
+          <guideImage>00210.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Cắt lát củ sả và ớt, cắt đôi tắc.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Luộc chân gà 15 phút cùng với củ gừng, khử mùi tanh.</content>
+          <guideImage>00221.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Chuẩn bị một nồi nước 200ml, cho giấm gạo, nước mắm, tương ớt, ớt sa tế, đường vào khuấy đều và đun sôi.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Chân gà chín, đem đi ngâm nước đá.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho hổn hợp chân gà, sả, ớt, tắc, và nước dùng, vào lọ thủy tính, ngâm 3 tiếng là có thể dùng được.</content>
+          <guideImage>00230.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Chè khúc bạch</foodName>
+      <description>Món chè này được ăn cùng nhãn hoặc vải, hạnh nhân giòn giòn cùng phần thạch mát lạnh có độ dẻo, dai và mềm, hương vị thanh mát, ngọt vừa.</description>
+      <image>02800.jpg</image>
+      <video>https://www.youtube.com/watch?v=HSbEpIWjX64</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Tráng miệng</foodType>
+      <steps>
+        <Step>
+          <content>- 200ml whipping cream.
+- 200ml sữa tươi.
+- 140g đường.
+- 1 cục phô mai Con bò cười.
+- 10g gelatin.
+- 5g bột trà xanh.
+- 20 quả vải tách hạt.
+- 250ml nước.
+- 30g hạnh nhân lát.</content>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Đầu tiên, bạn cho sữa tươi và whipping cream vào nồi.
+Cho phô mai vào bát nhỏ, đánh cho mịn rồi cho vào hoà cùng với hỗn hợp sữa.
+Tiếp tục thêm 60g đường vào, khuấy đều rồi đun với lửa nhỏ.
+Hòa gelatin với 20ml nước, ngâm một chút cho gelatin nở.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Bạn tắt bếp, cho hỗn hợp gelatin vào rồi khuấy cho tan hết.
+Bạn cho 1/2 lượng sữa vào khuôn chữ nhật. Phần sữa này sẽ làm khúc bạch vị thường.
+Hòa 5g bột trà xanh với 15ml nước cho đều, sau đó cho vào phần sữa còn lại.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Bạn cũng đổ sữa trà xanh vào khuôn, rồi mang cả 2 khuôn đi để lạnh 3 tiếng cho đông lại.
+Tiếp theo, ta rang hạnh nhân trên lửa vừa cho đến khi hạt hạnh nhân vàng và giòn.
+Để làm nước đường, bạn đun sôi 250ml nước với 80g đường còn lại. Để cho nước nguội hẳn.</content>
+          <guideImage>02822.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cắt khúc bạch thành miếng nhỏ, cho vải, nước đường, thêm đá rồi rắc hạnh nhân lên trên mặt là xong.</content>
+          <guideImage>02830.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Chả chay rim ngũ vị</foodName>
+      <description>Chả giòn làm nên món chay ngon. Miếng chả thấm đều ngũ vị, cay, giòn ăn kèm rau củ tươi ngon.</description>
+      <image>02600.jpg</image>
+      <video>https://www.youtube.com/watch?v=uSoSD4Fm03I</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 300g chả lụa chay.
+- 100g cà rốt.
+- 200g khổ qua.
+- 100g củ cải trắng.
+- 100g nấm rơm búp.
+- 50g hành baro.
+- 2 trái ớt hiểm.
+- 2 nhánh tiêu xanh.
+- Các gia vị nêm nếm món chả chay rim ngũ vị: Hạt nêm, nước tương, đường, dầu hào chay, bột ngọt.</content>
+          <guideImage>02610.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Chả lụa chay cắt miếng hình tam giác vừa ăn.
+Khổ qua bổ đôi, bỏ hạt rồi cắt xéo miếng dày chừng 0.5cm.
+Cà rốt, củ cải trắng bào vỏ. Cắt khúc hình vuông chừng 3cm.
+Nấm rơm búp cho vào ngâm với nước muối pha loãng khoảng 5 phút rồi rửa sạch, vớt nấm ra rổ để ráo nước rồi cắt làm đôi.
+Hành boaro 1 ít thái lát và 1 ít đem băm nhuyễn.
+Ớt hiểm thái lát.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Làm nước sốt rim chả chay: Pha 5 muỗng nước lọc, 1 muỗng nước mắm chay, 1/2 muỗng dầu hào chay, 1/2 muỗng ngũ vị hương, 1/2 muỗng hạt nêm, 1/2 muỗng bột ngọt và 2 muỗng đường. Trộn đều để các gia vị tan hoàn toàn.
+Bắc chảo dầu lên bếp, cho 3 muỗng dầu đun thật nóng rồi cho cà rốt và khổ qua vào chảo chiên sơ cho giòn. Sau đó, vớt ra để ráo dầu.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Tiếp theo, bắc chảo lớn lên bếp. Cho 1 muỗng dầu và một ít hành boaro băm nhuyễn vào phi thơm rồi cho hỗn hợp nước sốt vừa pha ở trên vào. Cho cà rốt, khổ qua, củ cải trắng, chả lụa chay và nấm rơm búp vào rim trên lửa nhỏ lim rim. Thả 2 nhánh tiêu xanh vào rim chung với hỗn hợp để làm dậy mùi thơm, giúp món ăn có vị cay nồng, hấp dẫn.
+Rim chả chay với hỗn hợp rau củ cho đến khi các nguyên liệu chín đều thì tắt bếp.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Múc chả chay rim ngũ vị ra đĩa, sắp xếp hỗn hợp rau củ lên đĩa rồi rắc ít tiêu xay, trang trí thêm vài lát ớt hiểm và hành boaro thái lát.
+Món chả chay rim ngũ vị ăn kèm với cơm nóng, các món bún hoặc thêm vào thực đơn các món ăn trưa, ăn tối là tuyệt nhất.
+Tùy vào khẩu vị mà bạn có thể làm thêm nước mắm chua ngọt hoặc chấm chả chay với tương ớt, tương đen sao cho đậm đà, phù hợp với sở thích ăn uống của mỗi gia đình.</content>
+          <guideImage>02630.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Cá cơm khô chiên nước mắm</foodName>
+      <description>Sau khi cá cơm được phơi khô, được chế biến khá đơn giản để trở thành món ngon trong bữa cơm gia đình.</description>
+      <image>01500.jpg</image>
+      <video>https://www.youtube.com/watch?v=JcOsks29MLo</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 100g cá cơm khô.
+- 2 củ tỏi.
+- 2 thìa mắm.
+- 1 thìa mì chính.
+- 3 trái ớt.</content>
+          <guideImage>01510.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Sau khi sơ chế sạch sẽ, để ráo nước, chờ dầu sôi.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Đập dập tỏi cho vào phi đến khi có mùi thơm.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho cá vào đảo đều.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho nước mắm và mì chính, khi chín đều múc ra dĩa và cho ớt cay thái nhỏ lên trên để trang trí.</content>
+          <guideImage>01523.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Dĩa cá cơm khô chiên nước mắm siêu ngon và đắt cơm trong thực đơn gia đình.</content>
+          <guideImage>01530.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Cánh gà chiên nước mắm</foodName>
+      <description>Vị mặn thơm của nước mắm, quyện với tỏi băm và bám đều vào miếng cánh gà khiến cho bất cứ ai khi nhìn thấy món ăn này cũng khó có thể cầm lòng.</description>
+      <image>00700.jpg</image>
+      <video>https://www.youtube.com/watch?v=WdPZB-ESW4k</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 400g cánh gà.
+- 2 muỗng đường.
+- 2 muỗng nước mắm.
+- 2 củ tỏi.</content>
+          <guideImage>00710.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Cánh gà rửa nước sạch, sau đó rửa lại với nước muối pha loãng cho hết mùi hôi rồi các bạn đem thấm khô.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho cánh gà vào rán ngập dầu với mức lửa to, đến khi lớp da gà có độ giòn và chuyển màu vàng ruộm thì vớt ra. Lót giấy thấm dầu cho bớt độ béo.</content>
+          <guideImage>00721.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Đem phi thơm tỏi với 1 chút dầu ăn. Khi tỏi thơm hạ lửa nhỏ, cho vào chảo đường và nước mắm theo tỉ lệ: 1:1 (cứ 1 thìa nước mắm kèm một thìa đường).</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Sau khi ước lượng nước mắm và đường vừa đủ, bật lửa to trở lại rồi thả cánh gà vào, cầm cán chảo lắc qua lắc lại cho hỗn hợp tỏi, mắm, đường ngấm đều. </content>
+          <guideImage>00730.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Gà tiềm thuốc bắc</foodName>
+      <description>Món ăn như một bài thuốc nam rất tốt cho sức khoẻ.</description>
+      <image>01400.jpg</image>
+      <video>https://www.youtube.com/watch?v=Ql-xdrqkJvE</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- Một con bồ câu non.
+- 200gr đậu xanh.
+- 1 bát gạo.
+- 2 thìa nước nắm.
+- 1 thìa mì chính.
+- 1 thìa hạt nêm.
+- 1 thìa muối.
+- Hành lá thái nhỏ.</content>
+          <guideImage>01410.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Đầu tiên rang gạo chuyển thành màu vàng nhạt.</content>
+          <guideImage>01420.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho gạo vào nồi nước vừa phải, nấu đến khi thành cháo.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho chim bồ câu đã làm sạch, cùng với đậu xanh đã ngâm vào và cho toàn bộ gia vị có sẵn, đợt đến khi bồ câu chín là xong món cháo bồ câu nấu đậu xanh.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Nồi cháo chim bồ câu đậu xanh siêu ngon cho các bà mẹ bầu, và em bé.</content>
+          <guideImage>01430.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Gỏi tai heo ngó sen</foodName>
+      <description>Gỏi ngó sen thanh mát, giòn sần sật kết hợp với nhân tôm thịt vừa thanh vừa đậm đà dễ ăn vào ngày hè.</description>
+      <image>02200.jpg</image>
+      <video>https://www.youtube.com/watch?v=LHT4bRrqVZ0</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Khai vị</foodType>
+      <steps>
+        <Step>
+          <content>- 400g tai heo.
+- 300g ngó sen.
+- 100g cà rốt.
+- 100g dưa leo.
+- 20g sả.
+- 2 trái ớt.
+- 3 củ tỏi.
+- 3 nhánh rau răm.
+- 4 củ hành tím.
+- 50ml nước mắm.
+- 4 muỗng cà phê muối.
+- 100g đường.
+- 1/2 quả chanh.
+- 1 quả tắc.</content>
+          <guideImage>02210.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Bạn bắc chảo lên bếp, cho đậu phộng vào rang vàng giòn cùng 1/2 muỗng cà phê muối, sau đó để nguội bớt, bóc vỏ, giã nhỏ.
+Ớt và tỏi thì đem lột vỏ, rửa sạch, để ráo, băm nhỏ.
+Hành tím lột vỏ, rửa sạch, để ráo.
+Rau răm rửa sạch, để ráo, xắt nhỏ.
+Sả đem cắt bỏ rễ và phần lá già ở trên, rửa sạch, để ráo, cắt khúc, đập dập.</content>
+          <guideImage>02220.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Tai heo bạn cạo sạch lông, chà xát với muối, rửa lại thật sạch với nước lạnh.Trong cách làm gỏi ngó sen tai heo này, để tai heo không bị hôi, bạn nên ngâm tai heo vào rượu pha nước gừng trong 5 phút, rồi vớt ra rửa lại nước lạnh cho sạch.
+Nấu nước sôi sau đó bạn cho sả, củ hành tím và 1 muỗng cà phê muối vào, xong cho tai heo vô, luộc chín.
+Chuẩn bị một tô nước đá lạnh, khi tai heo chín bạn vớt ra, ngâm 5-8 phút trong nước lạnh để tai heo giòn.
+Sau khi ngâm xong bạn lấy tai heo ra để ráo nước rồi xắt thành từng miếng mỏng dài vừa ăn.</content>
+          <guideImage>02221.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Ngó sen bạn bạn lột bỏ lớp vỏ bên ngoài để khi ăn không bị dai, cắt khúc, rửa sơ qua nước lạnh.
+Chuẩn bị 1 tô nước, pha với 2 muỗng cà phê muối, vắt 1/2 trái chanh vô, sau đó cho ngó sen vào ngâm 15-20 phút để tẩy hết mủ, ngó sen không bị thâm đen.
+Khi đã ngâm xong bạn lấy ngó sen ra cho vào túi vải vắt cho hết nước.
+Cà rốt bạn xắt sợi rồi đem trộn với 1/2 muỗng cà phê muối, ướp 5-10 phút cho ngấm gia vị rồi cho vào túi vải vắt nước.
+Tương tự, bạn cũng xắt sợi dưa leo rồi trộn với 1/2 muỗng cà phê muối, ướp 5-10 phút, rồi đem vắt nước.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Bắc nồi lên bếp, cho 50ml nước mắm, 100g đường vào nấu sôi, thường xuyên khuấy cho tan hết đường sau đó tắt bếp, để nguội.
+Bạn vắt nước cốt 1 quả tắc vào nước mắm, thêm 1 muỗng cà phê tương ớt, tỏi và ớt băm, khuấy đều lên là xong phần nước mắm trộn gỏi.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cuối cùng bạn cho tai heo, ngó sen, cà rốt và dưa leo, rau râm vào tô, rưới nước mắm lên, dùng đũa trộn đều, để yên 5 phút cho nước mắm ngấm vào nguyên liệu là hoàn thành món ăn rồi đấy.</content>
+          <guideImage>02230.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Hủ tiếu Nam Vang</foodName>
+      <description>Hủ tiếu Nam Vang là món hủ tiếu do người Việt chế biến thêm tôm, cá được bán đầu tiên ở Nam Vang, nguyên liệu chính là hủ tiếu dai, nước dùng chính là thịt bằm nhỏ, lòng heo nấu cùng. Sau đó trụng sơ mì với nước dùng sau đó cho các nguyên liệu phụ vào như giá, hẹ, thịt bằm cùng lòng heo vào.</description>
+      <image>00600.jpg</image>
+      <video>https://www.youtube.com/watch?v=jIsPTmKQd74</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 1kg xương ống.
+- 500g thịt nạc.
+- 300g tôm.
+- 30 trứng cút.
+- 300g gan heo.
+- 1 củ hành tây, 1 củ cải muối.
+- 1 con mực.
+- 50g tôm khô.
+- 1 bó hủ tiếu dai.</content>
+          <guideImage>00610.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Xương ống rửa sạch, chặt làm đôi và chần sơ nước sôi có tí muối, rửa lại với nước lạnh. Sau đó nấu nước dùng cùng củ hành tây, tôm khô, khô mực nướng, củ cải muối và 1 cục đường phèn. Nấu ít nhất 2 giờ và vớt bọt thường xuyên.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Thịt rửa sạch với nước muối loãng, chia làm 2. Một phần cho vào nồi nước dùng luộc chín, một phần băm nhỏ ướp hạt nêm, muối, tiêu và nấu với ít nước cho chín và tơi thịt.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Trứng cút luộc chín và lột vỏ.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Tôm lột vỏ luộc chín. Gan luộc với tí muối và dấm. Phần thịt phân nửa luộc trong nồi nước dùng vớt ra cắt lát cùng với gan.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Hủ tiếu ngâm nước lạnh khoảng 30 phút. Sau đó vớt ra để ráo.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Khi gần ăn trụng hủ tiếu vừa chín tới, khi ăn sợi hủ tiếu dai dai chứ không mềm. Nêm muối, hạt nêm cho vừa khẩu vị.</content>
+          <guideImage>00630.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Lẩu cá đuối lá giang</foodName>
+      <description>Món lẩu với công thức đảm bảo cho một bữa ăn ngon miệng với vị chua, ngọt, cay rất vừa ăn.</description>
+      <image>02500.jpg</image>
+      <video>https://www.youtube.com/watch?v=bX7nHjolmwE</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 350g cá đuối.
+- 100g măng chua.
+- 50g Llá giang.
+- 2 trái Cà chua.
+- Rau om, ngò gai, tỏi phi.
+- Bún.
+- Hành tỏi băm, ớt hiểm.
+- Gia vị khác.</content>
+          <guideImage>02510.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Cá đuối chặt miếng vừa ăn, ướp 1 muỗng hành tỏi băm, 1 muỗng nước mắm, 1 muỗng bột ngọt, 1 trái ớt hiểm đập dập.
+Măng rửa sạch , để ráo. Lá giang vò sơ. Cà chua cắt múi cau.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Phi thơm một ít hành tỏi băm, xào sơ cá cho săn, trút ra dĩa để riêng.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Phi thơm hành tỏi băm, cho 1,5l nước vào nấu sôi, nêm một gói Gia vị nêm sẵn Lẩu Thái, thêm măng chua, lá giang và cà chua vào, trút cá vào trở lại nấu đến khi cá chín, thêm rau om, ngò gai cắt nhỏ và tỏi phi, tắt lửa.</content>
+          <guideImage>02522.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Dùng nóng với bún. Chấm nước mắm ớt.</content>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Mực hấp gừng</foodName>
+      <description>Món ăn được chế biến đơn giản, rất ngon và dễ ăn.</description>
+      <image>01600.jpg</image>
+      <video>https://www.youtube.com/watch?v=DPb0clGu8kM</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 500g mực cơm tươi.
+- 3 củ tỏi lớn.
+- 1,5l nước lạnh.</content>
+          <guideImage>01610.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Cho nước lạnh vào nồi hấp, thái nhỏ gừng và cho vào nước một nửa.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Dùng dụng cụ ngăn cách mực và nước để hấp cách thủy.</content>
+          <guideImage>01621.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho số gừng thái nhỏ còn lại lên trên mực và bắt đầu hấp. Khoảng 15 phút mực chín lấy ra.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Món mực hấp gừng ăn kèm với nước mắm hoặc tương ớt là ngon nhức nách.</content>
+          <guideImage>01630.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Mực xào chua ngọt</foodName>
+      <description>Mực xào chua ngọt là món ăn hấp dẫn, ngon được rất nhiều người ưa thích. Tuy nhiên, không phải ai cũng biết các nguyên liệu cũng như cách chế biến món mực xào chua ngọt.</description>
+      <image>00300.jpg</image>
+      <video>https://www.youtube.com/watch?v=Ew35BJSvCFs</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Khai vị</foodType>
+      <steps>
+        <Step>
+          <content>- 500g mực ống hoặc mực lá.
+- 1 quả ớt chuông.
+- 1 quả dưa leo.
+- 1 quả thơm.
+- 1 quả cà chua.
+- Gia vị: hành lá, rau mùi, cần tây, tiêu, tỏi, ớt, đường, hành khô, hạt nêm, muối,…</content>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Cà chua, hành tươi rửa sạch bổ múi cau. Ớt chuông đỏ, ớt chuông xanh rửa sạch, lấy hạt, cắt miếng vừa ăn. Dưa leo gọt vỏ xắt miếng vừa ăn. Dứa gọt sạch vỏ, bỏ mắt, cắt miếng dày vừa ăn.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho nữa thìa canh tỏi, nữa thìa canh hành khô băm, nước mắm, hạt nêm nhớ căn khoảng gia vị sau đó đem trộn đều các nguyên liệu lại với nhau để mực thấm gia vị trong vòng 20–30 phút.</content>
+          <guideImage>00321.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho dầu ăn vào chảo và bật bếp lên, khi dầu đã sôi bạn cho tỏi vào phi thơm vàng và cho mực vào xào lăn, cho lửa to 1 tí để mực chín đều sau đó nêm gia vị cho vừa ăn và cho mực vào một tô sạch.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho chảo khác lên bếp cho dầu vào đến khi dầu sôi thì bỏ hành khô, tỏi băm nhuyễn vào phi thơm, sau đó cà chua vào đảo đều, tiếp đến cho dứa vào, sau cùng là cho ớt chuông đỏ, ớt chuông xanh, dưa leo vào đảo.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Khi các nguyên liệu gần chín cho mực vào đảo lại lần nữa cho các nguyên liệu hòa quyện vào nhau.</content>
+          <guideImage>00330.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Nước mía sầu riêng</foodName>
+      <description>Tác dụng của nước mía rất phong phú. Bên cạnh khả năng giải khát, món đồ uống này còn được biết đến là thức uống năng lượng và dinh dưỡng. Nước mía chứa thành phần đường tự nhiên giúp bổ sung năng lượng để bạn làm việc và học tập.</description>
+      <image>00000.jpg</image>
+      <video>https://www.youtube.com/watch?v=v3e4uF3TMJo</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Thức uống</foodType>
+      <steps>
+        <Step>
+          <content>- 1-2 cây mía.
+- 1-2 muối sầu riêng.
+- 6g bột rau câu.   
+- 80g đường trắng.
+- 3-4 lá dứa.
+- 50g Đậu phộng.</content>
+          <guideImage>00010.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Nấu rau câu cho vào nước lá dứa, 30g đường và 3g bột rau câu. Hỗn hợp sôi tới thì tắt bếp.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Rang đậu phộng.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Ép nước mía cho từ từ mía vào máy ép, ép lấy nước đến khi hết số mía.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Tách sầu riêng khỏi hạt.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho nước mía và sầu riêng, xay đều.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho ra ly, rắc đậu phộng và thạch rau câu lên.</content>
+          <guideImage>00030.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Nộm gà ta</foodName>
+      <description>Được chọn lọc từ phần thịt ức của gà, trộn đều với rau thơm, hành tây. Là món khai vị tuyệt vời trong bữa ăn gia đình cũng như các bữa tiệc.</description>
+      <image>01200.jpg</image>
+      <video>https://www.youtube.com/watch?v=t135PwNARd0</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Khai vị</foodType>
+      <steps>
+        <Step>
+          <content>- 1 miếng thịt ức gà.
+- 1 quả đu đủ xanh.
+- 1/2 củ cà rốt, nắm rau mùi, húng quế.
+- 1 củ tỏi.
+- 1 nắm lạc rang chín.
+- 1 thìa đường, bột canh, tương ớt.
+- 1 quả chanh.
+- Nước mắm.</content>
+          <guideImage>01210.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Ức gà đem rửa sạch rồi cho vào nồi, thêm 1 chút muối đem luộc cho thịt gà chín thì vớt ra.
+Bạn cũng có thể tận dụng gà luộc có sẵn tại nhà để làm nộm.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Đợi cho thịt gà nguội bớt sau đó xé thịt gà thành những sợi vừa nhỏ.</content>
+          <guideImage>01221.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Đu đủ gọt sạch vỏ rồi nạo thành sợi, rửa thật sạch cho hết nhựa. Cà rốt cũng đem nạo sợi nhỏ.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho 1 thìa muối vào cùng với đu đủ, cà rốt sau đó bóp thật kỹ cho đu đủ mềm, để khoảng 20 phút mới cho nước lọc vào rửa lại cho bớt mặn rồi vắt sạch nước.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Ớt sừng, tỏi băm nhỏ, rau thơm nhặt lấy ngọn non rửa sạch rồi để ráo nước sau đó thái khúc ngắn.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Pha nước nộm, bạn cho nước lọc, nước cốt chanh, nước mắm, tương ớt, đường sau đó khuấy đều cho đường tan hết rồi mới cho ớt băm, tỏi băm vào sau cùng. bạn có thể nếm lại cho hợp khẩu vị.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cuối cùng bạn cho đu đủ cà rốt vào âu sau đó thêm thịt gà xé sợi, rau thơm, nước trộn nộm và trộn thật đều nguyên liệu. Để khoảng 10 phút cho nộm ngấm đều gia vị rồi mới cho nộm ra đĩa, rắc lạc rang chín giã dập lên trên và thưởng thức.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Một món nộm gà xé ngon nhức nhách cho cả nhà, cũng như chiêu đãi bạn bè.</content>
+          <guideImage>01230.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Sinh tố bơ</foodName>
+      <description>Món tráng miệng với nhiều chất dinh dưỡng, dễ làm, tốt cho da.</description>
+      <image>01900.jpg</image>
+      <video>https://www.youtube.com/watch?v=RTPw7eYKNMQ</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Tráng miệng</foodType>
+      <steps>
+        <Step>
+          <content>- 2 quả bơ chín.
+- 3 thìa đường.</content>
+          <guideImage>01910.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Sơ chế loại bỏ hạt bơ, tách bỏ vỏ.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho vào máy say sinh tố cùng với 3 muỗng đường.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Đến khi nhuyễn bỏ vào ly cho thêm đá viên, hoặc bỏ mát trong tủ lạnh.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Với ly sinh tố bơ không những giúp cho giải nhiệt mùa hè còn làm cho làn da chị em phụ nữ thêm sánh mịn.</content>
+          <guideImage>01930.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Sinh tố mãng cầu</foodName>
+      <description>Món tráng miệng tuyệt vời với từ trái mãng cầu nhiều chất dinh dưỡng.</description>
+      <image>01800.jpg</image>
+      <video>https://www.youtube.com/watch?v=ERJR1ox4VCo</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Tráng miệng</foodType>
+      <steps>
+        <Step>
+          <content>- 1 quả mãng cầu chín.
+- 3 thìa đường.
+- Đá viên.</content>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Sơ chế loại bỏ hạt mãng cầu.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho vào máy say sinh tố cùng với 3 muỗng đường.</content>
+          <guideImage>01821.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Đến khi nhuyễn bỏ vào ly cho thêm đá viên, hoặc bỏ mát trong tủ lạnh.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Mùa hè 38 độ C không còn làm nóng vì đã có ly sinh tố mát lạnh béo ngậy, thơm lừng.</content>
+          <guideImage>01830.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Sữa bắp</foodName>
+      <description>Sữa bắp hay còn gọi là sữa bột bắp là một loại thực phẩm ở dạng lỏng được chế biến từ nguyên liệu là bắp bằng phương pháp nghiền nghiền nhỏ hạt ngô để thu bột bắp và thu thập các dư lượng sữa từ ngô sau đó nấu chín.</description>
+      <image>00800.jpg</image>
+      <video>https://www.youtube.com/watch?v=JG8GGj6KS6o</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Tráng miệng</foodType>
+      <steps>
+        <Step>
+          <content>- 500g bắp Mỹ.
+- 200ml sữa tươi không đường.
+- 200g sữa đặc.
+- 20g đường trắng.</content>
+          <guideImage>00810.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Lột sạch lớp vỏ bắp cùng râu bên trong. Rửa sạch trái bắp và tách lấy 500g hạt bắp cho vào tô để riêng. Giữ lại phần râu bắp, cùi và vỏ lụa đã lột khi nãy. Cột gọn phần râu bắp lại, để tất cả qua một bên.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Bắc nồi lên bếp, cho cùi bắp, râu bắp cùng vỏ lụa non vào. Chế thêm 1l nước. Bật bếp, đun sôi hỗn hợp trong nồi trên lửa liu riu khoảng 30 phút để lấy nước luộc. Lọc lấy nước luộc qua rây, bỏ xác.</content>
+          <guideImage>00821.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho toàn bộ 500g hạt bắp vào máy sinh tố. Chế phần nước luộc vừa nấu khi nãy vào cùng bắp và xay đến khi bắp nhuyễn, mịn mượt, không còn lợn cợn hạt bắp.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Lọc hỗn hợp bắp vừa xay qua vải lọc để loại bỏ hết xác bắp (nhớ vắt cho thật mạnh tay và kĩ để lấy được hết chất trong bắp, tránh lãng phí). Đổ hỗn hợp sữa bắp vừa lọc được vào nồi, bật bếp đun cho hỗn hợp nóng bốc khói và hơi sệt lại thì nhắc xuống.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho 20g đường, 200g sữa đặc và 200ml sữa tươi vào nồi sữa bắp.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Khuấy đều cho đường tan và hòa quyện đều là xong rồi đó.</content>
+          <guideImage>00830.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Sữa chua lá dứa</foodName>
+      <description>Sữa chua vị lá dứa thơm mát dễ chịu, hòa quyện với vị chua ngọt đặc trưng của sữa chua sẽ là món tráng miệng cực kỳ hấp dẫn và bổ dưỡng cho mùa hè năm nay.</description>
+      <image>00900.jpg</image>
+      <video>https://www.youtube.com/watch?v=cnTf2Ti77bs</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Tráng miệng</foodType>
+      <steps>
+        <Step>
+          <content>- 160g sữa ông thọ.
+- 150ml nước.
+- 5 lá dứa.
+- 100g sữa chua mua sẵn.
+- 700ml sữa tươi.
+- Hũ đựng sữa chua.</content>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Trước tiên bạn rửa sạch lá dứa rồi cắt nhỏ cho vào máy xay cùng với 150ml nước, xay nhuyễn hỗn hợp rồi đổ ra lọc lấy nước lá dứa.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Đổ nước lá dứa vào nồi và đun sôi thì cho sữa đặc vào khuấy đều.</content>
+          <guideImage>00921.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Tiếp theo cho sữa tươi vào cùng và khuấy đều hỗn hợp.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cuối cùng bạn cho sữa chua mua sẵn vào cùng rồi khuấy đều thêm 1 lần nữa là được, lọc hỗn hợp qua dây cho mịn.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Rót hỗn hợp sữa chia đều vào các hũ sạch đựng sữa. Bạn đổ nước ấm vào nồi sau đó đặt các hũ sữa chua vào nồi, sao cho nước ngập 1/2 hũ sữa chua là được, đậy nắp và đem ủ khoảng 6-8 tiếng là sữa đông lại.</content>
+          <guideImage>00930.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Sữa gạo rang</foodName>
+      <description>Sữa gạo rang là một thức uống được chị em ưa chuộng làm đẹp hữu hiệu, công dụng của sữa gạo không chỉ có vậy mà còn là một thức uống dinh dưỡng, có lợi cho cơ thể.</description>
+      <image>02100.jpg</image>
+      <video>https://www.youtube.com/watch?v=xhvsc7VanEM</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Thức uống</foodType>
+      <steps>
+        <Step>
+          <content>- 400ml sữa tươi.
+- Đường tùy theo khẩu vị.
+- 50g gạo nếp.
+- 50g gạo tẻ.
+- 400ml nước sôi.</content>
+          <guideImage>02110.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Trước tiên ta làm nóng chảo và cho cả hai loại gạo mà mình chuẩn bị vào rang. Các bạn đảo đểu cho đến khi gạo rang ngả màu vàng nhạt thì trút ra.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Tiếp tục bạn cho chung sữa tươi, gạo rang, nước sôi vào để ngâm trong khoảng 15 phút trước khi nấu sữa gạo rang.Bật bếp đun nồi nước gạo rang sữa hàn quốc với lửa nhỏ, đun cho đến khi nước vừa sôi nhẹ thì tắt bếp. Lưu ý: khi làm sữa gạo Hàn Quốc lúc đun thỉnh thoảng ta khuấy đều để gạo lắng dưới đáy không bị cháy khét.</content>
+          <guideImage>02121.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Chờ cho nồi sữa gạo của ta nguội bớt rồi lọc lấy phần sữa, bỏ phần gạo. Vậy là ly sữa gạo rang đã hoàn thành, các bạn có thể dùng nóng hoặc lạnh, thêm đường tùy thích.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Sữa gạo rang cực kì dễ uống vị khá lạ miệng, uống sữa gạo là một cách làm đẹp trực tiếp cho cơ thể, hiệu quả mà nhanh chóng phải không nào? Qua đây thì bạn cũng đã thấy cách làm sữa gạo rang đơn giản mà nhanh chóng quá rồi, không phải máy móc thiết bị cầu kì.</content>
+          <guideImage>02130.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Trà dưa hấu</foodName>
+      <description>Trà dưa hấu với vị đậm của trà, hương dưa hấu thơm lừng sẽ khiến bạn thích mê. Màu đỏ của nước ép dưa hấu hòa quyện cùng màu trà sẽ làm ly thức uống thêm hấp dẫn.</description>
+      <image>02000.jpg</image>
+      <video>https://www.youtube.com/watch?v=u3ZVfhkKqNs</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Thức uống</foodType>
+      <steps>
+        <Step>
+          <content>- 1 miếng dưa hấu.
+- 1 gói trà túi lọc.
+- 250ml nước sôi.
+- 1 thìa mật ong.
+- 1 bát đá viên.</content>
+          <guideImage>02010.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Bạn cho nước sôi vào 1 cái cốc sau đó cho trà túi lọc vào ngâm 5 phút, vớt trà túi lọc ra và để nguội.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Dưa hấu cho vào máy ép lấy nước cốt hoặc cho vào máy xay sinh tố xay nhuyễn và lọc lấy nước cốt đều được.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Khi trà đã nguội, bạn cho mật ong vào khuấy đều cho tan mật ong.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho đá viên hoặc đá bào vào ly sau đó rót trà vào ly. Tiếp đến bạn rót nước dưa hấu vào đầy ly, khuấy đều và thưởng thức, bạn có thể thêm hoặc bớt mật ong cho hợp khẩu vị là được nhé!</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Mùa hè đã tới gần hãy sáng tạo những thức uống giải nhiệt mới để xua đi cái nắng nóng nhé! Món trà dưa hấu với sự kết hợp giữa trà và nước ép dưa hấu sẽ tạo nên thức uống ngọt mát, lạ miệng và giải nhiệt ngay lập tức, uống tới đâu mát lạnh tới đó.</content>
+          <guideImage>02030.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Trà tắc</foodName>
+      <description>Uống trà tắc mang đến những lợi ích quan trọng cho sức khỏe. Trong quả tắc chứa hàm lượng cao chất xơ, vitamin, hàm lượng calorie thấp nên giúp ích nhiều trong quá trình giảm cân và tăng sức đề kháng. Bạn có thể uống trà tắc để thay cho những thức uống chứa nhiều đường, chất béo khác.</description>
+      <image>00100.jpg</image>
+      <video>https://www.youtube.com/watch?v=rcnSqji_IlM</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Thức uống</foodType>
+      <steps>
+        <Step>
+          <content>- 30g hồng trà.
+- 1 chén đường.
+- 10 trái tắc.</content>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Đun sôi 1l nước cho 30g hồng trà vào và ủ khoảng 10-15 phút. Sau đó vớt túi trà ra và để nước trà nguội.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho vào nồi 1 chén đường và khoảng 1 chén nước. Đun sôi cho đến khi đường tan và để nguội.</content>
+          <guideImage>00121.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho vào đá vào đầy ly. Cho trà và nước đường vào sao cho vừa uống là được.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Vắt vào cùng khoảng 2 quả tắc (lọc qua rây để loại bỏ hạt).</content>
+          <guideImage>00130.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Vịt hầm bí xanh</foodName>
+      <description>Vị thanh mát của bí xanh, vị đậm đà của vịt cộng với vị đặc trưng của nấm đông cô tạo nên sự hấp dẫn cho món hầm này.</description>
+      <image>02700.jpg</image>
+      <video>https://www.youtube.com/watch?v=i3UR6kCk1ps</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 1 con vịt.
+- 500g bí xanh.
+- 2 củ cà rốt.
+- Gia vị: gừng, hành tím, hành lá, ngò rí, đường, bột ngọt, muối, hạt nêm.</content>
+          <guideImage>02710.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Rửa vịt sơ với nước sạch. Xắt vài lát chanh, chà xát lên mình vịt để khử mùi hôi rồi rửa kỹ nhiều lần. Có thể thay chanh bằng vài lát gừng đập dập, rượu hay giấm.
+Chặt vịt thành từng miếng vừa ăn. Không nên chặt quá vụn. Ướp thịt với một ít gia vị gồm: hành tím giã nhuyễn, 2 muỗng cà phê đường, 1/2 muỗng cà phê bột ngọt, 1 muỗng cà phê tiêu, 1 muỗng cà phê muối. Cho thịt vào ngăn mát tủ lạnh ướp khoảng 5-10 phút.
+Bí xanh gọt vỏ, chẻ dọc thành 4 phần, bỏ hạt. Nếu mua được quả bí xanh còn non thì không cần bỏ hạt. Sau đó, xắt bí xanh thành lát dày khoảng 1 – 2cm rồi thêm 2 muỗng cà phê hạt nêm vào trộn đều. Cách làm này giúp món canh bí xanh thêm đậm đà.
+Lưu ý: Với món thịt vịt hầm bí xanh thì không nên xắt lát mỏng.
+Cà rốt gọt vỏ, rửa sạch rồi xắt lát khoảng 1cm.
+Hành lá, ngò rí rửa sạch, xắt nhỏ.</content>
+          <guideImage>02720.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Bắc chảo lên bếp, thêm 1 muỗng canh dầu ăn. Vặn lửa lớn cho dầu mau nóng già rồi cho hành tím băm nhỏ vào phi thơm. Tiếp đến, cho thịt vịt đã ướp vào, nhanh chóng đảo đều. Khi thịt săn lại thì thêm 750ml nước và cà rốt vào nấu.
+Nên nấu thịt vịt với lửa lớn để mau sôi rồi vớt sạch bọt. Sau đó, hạ lửa liu riu hầm đến khi thịt mềm vừa ăn thì thêm bí xanh. Nấu khoảng 5 phút, nêm gia vị gồm: 1 muỗng cà phê muối, 1 muỗng cà phê đường, 1/2 muỗng cà phê bột ngọt. Canh sôi lên lại thì tắt bếp, món ăn hoàn thành.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Múc món thịt vịt hầm bí xanh ra tô, rắc một ít hành, ngò và tiêu cho dậy hương thơm. Thưởng thức món ăn với cơm nóng và chấm với nước mắm gừng.</content>
+          <guideImage>02730.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Vịt nướng chao</foodName>
+      <description>Vịt nướng chao là món ăn ngon, được yêu thích trong những ngày lạnh. Vịt nướng chao với thịt vịt mềm, thơm ngon, thấm đậm gia vị, thơm mùi chao, sẽ khiến cả nhà càng ăn càng xuýt xoa, ngon miệng không cưỡng lại.</description>
+      <image>00400.jpg</image>
+      <video>https://www.youtube.com/watch?v=YChfPJzQfZk</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Món chính</foodType>
+      <steps>
+        <Step>
+          <content>- 1 con vịt.
+- 1 hũ nhỏ chao môn trắng.
+- 5 củ hành tím.
+- 2 quả chanh.
+- 1 củ gừng.
+- Gia vị: tiêu, muối, đường, dầu điều, sa tế, hạt nêm, bột ngọt.
+- Đậu bắp, dưa leo, rau sống.</content>
+          <guideImage>00410.jpg</guideImage>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Chặt vịt thành từng miếng to rồi ướp cùng 1 muỗng nước cốt chanh. Hành tỏi, băm nhuyễn. Tán nhuyễn chao, nêm thêm một chút đường cho dịu thanh, bớt mặn.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Cho chao vừa tán nhuyễn, hành tím băm, tỏi băm, 1 muỗng cà phê hạt nêm, 1 muỗng cà phê đường, 1 muỗng cà phê dầu điều, 1 muỗng cà phê sa tế, 1/2 muỗng bột ngọt vào phần thịt vịt và ướp trong 45 phút đến 1 tiếng cho thấm đẫm tất cả các gia vị.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Trong quá trình nướng, bạn nên trở đều tay để thịt vịt được chín đều, tránh xảy ra tình trạng cháy xém, làm mất hương vị cũng như màu sắc.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Khi thấy, thịt chuyển sang màu vàng sẫm và dậy mùi thơm thì lúc này thịt đã chín bạn có thể thưởng thức được rồi đấy! Thời gian nướng lý tưởng để thịt vịt chín là 20 phút đối với miếng nhỏ và 40 phút khi còn nguyên con.</content>
+          <guideImage>00430.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+    <Recipe>
+      <foodName>Đậu bắp xào tỏi</foodName>
+      <description>Đậu bắp xào tỏi là món ăn rất phổ biến trong các bữa cơm của mỗi gia đình bởi những công dụng của nó mang lại không chỉ tốt cho sức khỏe mà còn giúp giảm cân hiệu quả.</description>
+      <image>02300.jpg</image>
+      <video>https://www.youtube.com/watch?v=7ALd7QfOhAA</video>
+      <beProtected>true</beProtected>
+      <favorite>false</favorite>
+      <foodType>Khai vị</foodType>
+      <steps>
+        <Step>
+          <content>- 500g Đậu bắp.
+- 2 củ tỏi.
+- 5 trái ớt.
+- Gia vị: nước tương, bột ngọt, dầu ăn, hạt nêm, dầu hào, tương ớt.</content>
+          <stepType>1</stepType>
+        </Step>
+        <Step>
+          <content>Đậu bắp: Trước khi mua về bạn nhớ ngâm nước muối khoảng 10 phút rồi mang ra sơ chế. Cắt bỏ đầu vào cuống, rửa sạch bằng nước muối rồi cắt lát chéo vừa miệng.
+Tỏi: Bỏ vỏ, rửa sạch, đập dập.
+Ớt: Rửa sạch, cắt lát.</content>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Sau khi đã sơ chế xong phần nguyên liệu thì bạn tiến hành xào đậu bắp luôn. Bạn Cho dầu vào chảo phi thơm tỏi, cho 1/2 chén nước vào cùng với 1/2 muỗng bột ngọt, 1 muỗng hạt nêm, 1 muỗng dầu hào. Khuấy đều gia vị rồi cho phần đậu bắp vào, ăn cay thì bạn có thể cho thêm ớt.
+Bạn đảo đều phần đậu bắp để không bị cháy xém dưới chảo. Xào cho đến khi thấy đậu bắp đổi màu trong hơn thì nêm nếm lại gia vị cho vừa ăn.
+Khi thấy đậu bắp đã chín vừa ăn thì bạn tắt bếp. Không để đậu bắp chín mềm quá sẽ không được ngon.</content>
+          <guideImage>02321.jpg</guideImage>
+          <stepType>2</stepType>
+        </Step>
+        <Step>
+          <content>Bày thức ăn ra dĩa thưởng thức cùng với cơm trắng và một số món ăn khác.</content>
+          <guideImage>02330.jpg</guideImage>
+          <stepType>3</stepType>
+        </Step>
+      </steps>
+    </Recipe>
+  </recipes>
+  <tips>
+    <string>Nấu cháo khi sôi chúng ta nên cho một thìa dầu ăn vào để giảm khả năng bị tràn.</string>
+    <string>Cắt chanh nhiều nước, chia làm 3 phần dọc theo má quả chanh và cắt dọc theo chiều dọc.</string>
+    <string>Làm thịt bò không bị dai chúng ta nên cắt theo sớ ngang không nên cắt theo sớ dọc.</string>
+    <string>Khi hấp cá nếu thoa đều một chút trứng gà lên cá, cá sẽ hấp thụ các chất dinh dưỡng trong trứng làm thịt cá mềm, thơm và bổ hơn.</string>
+    <string>Rang tiêu trên lửa cho đến khi có mùi thơm rồi cho vào cối giã, cách này sẽ giúp hương vị của tiêu được phát huy tốt hơn trong món ăn của bạn.</string>
+    <string>Rửa sạch vịt cùng muối để khử hết mùi hôi đặc trưng, bạn có thể thay muối bằng gừng và rượu, sau đó rửa lại một lần nữa bằng nước sạch để khử hết mùi hôi của vịt.</string>
+    <string>Để vỏ bánh mì giòn là đặt một bát nước vào trong lò trong khi nướng bánh, hơi nước bốc lên sẽ làm vỏ bánh trở nên giòn và ngon hơn.</string>
+    <string>Đường cũng là một loại gia vị như muối. Với những món quá chua, bạn nên bỏ thêm chút đường để giảm vị chua, giúp món ăn ngon hơn.</string>
+    <string>Để món ăn có hương vị hấp dẫn hơn, bạn nên rang các loại hạt gia vị như hạt tiêu đen, hạt thì là… rồi dùng cối giã nhuyễn và cho vào món ăn.</string>
+    <string>Bảo quản rau trong tủ lanh, chúng ta không nên để trực tiếp mà nên cho vào bọc thực phẩm hoặc hộp, rồi mới cho vào tủ lạnh để cho rau giữ được tươi xanh lâu và không bị dính mùi thức ăn trong tủ lạnh.</string>
+    <string>Khi chiên thức ăn nên bỏ một chút muối trắng vào dầu thì dầu sẽ không bắn.</string>
+    <string>Chiên đồ ăn tươi sống như cá, mực,... thì nên để khô ráo trước khi cho vào chảo như vậy dầu sẽ không bắn.</string>
+    <string>Để làm một bát nước mắm tỏi ớt đẹp mắt nên vắt chanh sau cùng để tỏi và ớt nổi lên trông bắt mắt.</string>
+    <string>Khi thái đồ ăn trên thớt để tránh cắt vào tay thì tay trái nên cụp cái khớp vào phía lòng bàn tay và sử dụng đốt giữa ngón tay để giữ đồ.</string>
+    <string>Để luộc rau tươi và xanh, sau khi rau chín vớt ra rỗ và trụng nhanh qua nước lạnh.</string>
+    <string>Khi ngâm ốc, hến với nước lạnh cho thêm ít ớt tươi cắt nhỏ bỏ vào, vừa giúp sạch vừa làm biến mất mùi tanh.</string>
+    <string>Khi luộc trứng để biết trứng đã chín hay chưa dùng đũa gắp trứng, gắp được là trứng đã chín, còn không gắp được là chưa chín nhé.</string>
+    <string>Khi chiên xúc xích nên khứa vài đường nhỏ để không bị nổ, nát xúc xích và chín đều hơn.</string>
+    <string>Rang gạo trước khi nấu cháo sẽ giúp nồi cháo ngon hơn và bắt mắt.</string>
+    <string>Những loại bánh nhanh hỏng như bánh chưng, bánh tét, bánh giầy,... khi nấu xong ép nước ra ngoài để bảo quan lâu hơn.</string>
+    <string>Những loại rau quả như là bí ngòi, ớt Đà Lạt hay dưa chuột thì nên bảo quản ở bên ngoài tủ lạnh, đặt lên một cái giá mà ở phía dưới có khay nước để duy trì độ ẩm.</string>
+    <string>Tất cả các loại thịt đông lạnh trước khi chế biển nên dùng nước gừng ngâm, như vậy thịt sẽ tươi ngon trở lại.</string>
+    <string>Các loại thịt sau khi nướng chín nên để nghỉ 4 – 5 phút trước khi cắt lát hoặc thưởng thức vì như thế phần nước bên trong thịt sẽ không bị chảy ra và miếng thịt của bạn sẽ ngon hơn rất nhiều.</string>
+    <string>Nhiều khi do không để ý, thực ra để dầu nóng già rồi mới cho thức ăn vào rán chính là cách tốt nhất để tiết kiệm dầu khi làm đồ rán.</string>
+    <string>Những loại rau củ như cà rốt hay hành nên được giữ theo chiều thẳng đứng giống như là khi chúng vẫn còn ở trong đất, như thế chúng giữ được lâu hơn.</string>
+    <string>Khi thái thịt mỡ, trước tiên ta nên nhúng miếng thịt đó vào nước lạnh, sau đó đặt lên thớt thái vừa thái vừa rắc một ít nước lạnh lên thớt như vậy thái không phải dùng sức, miếng mỡ không bị trơn truột cũng không dính chặt vào thớt.</string>
+    <string>Mùa hè sữa thường hay dễ bị hỏng. Nếu ta cho vào sữa một ít muối, như vậy sẽ kéo dài được thời gian bảo quản sữa.</string>
+    <string>Trứng gà cũng nên để ở ngoài tủ lạnh thì sẽ ngon hơn, bởi vì vỏ trứng có lỗ dù rất nhỏ cũng đủ để cho mùi của những thực phẩm khác bị thẩm thấu vào và ảnh hưởng tới độ ngon của trứng.</string>
+    <string>Khi nghi ngờ về độ chín của thực phẩm thì nên để vào nướng tiếp thay vì băn khoăn, món nướng luôn có thể trở đi trở lại trên bếp.</string>
+    <string>Khi làm nộm có cà chua, ngoài việc cho đường vào nộm ta không nên quên cho thêm một ít muối vào cà chua, như vậy vị chua trong cà sẽ được giảm bớt mà món nộm lại đậm đà dễ ăn.</string>
+  </tips>
+</Data>
